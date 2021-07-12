@@ -1,11 +1,11 @@
 Sample configuration files for:
 ```
-SystemD: pivxd.service
-Upstart: pivxd.conf
-OpenRC:  pivxd.openrc
-         pivxd.openrcconf
-CentOS:  pivxd.init
-macOS:    org.pivx.pivxd.plist
+SystemD: tenupd.service
+Upstart: tenupd.conf
+OpenRC:  tenupd.openrc
+         tenupd.openrcconf
+CentOS:  tenupd.init
+macOS:    org.tenup.tenupd.plist
 ```
 have been made available to assist packagers in creating node packages here.
 

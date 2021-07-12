@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=TenUp Core
+Comment=TenUp P2P Cryptocurrency
+Comment[fr]=TenUp, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=TenUp, eşten eşe kriptografik sanal para birimi
+Exec=tenup-qt %u
+Terminal=false
+Type=Application
+Icon=tenup128
+MimeType=x-scheme-handler/tenup;
+Categories=Office;Finance;
+StartupWMClass=TenUp-qt

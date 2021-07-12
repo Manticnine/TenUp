@@ -1,0 +1,6 @@
+usr/local/bin/tenup-qt usr/bin
+share/pixmaps/tenup32.xpm usr/share/pixmaps
+share/pixmaps/tenup16.xpm usr/share/pixmaps
+share/pixmaps/tenup128.png usr/share/pixmaps
+debian/tenup-qt.desktop usr/share/applications
+debian/tenup-qt.protocol usr/share/kde4/services/

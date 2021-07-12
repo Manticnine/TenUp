@@ -1,9 +1,9 @@
-// Copyright (c) 2019 The PIVX developers
+// Copyright (c) 2019 The TenUp developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PIVX_PAIRRESULT_H
-#define PIVX_PAIRRESULT_H
+#ifndef TUPX_PAIRRESULT_H
+#define TUPX_PAIRRESULT_H
 
 
 class PairResult {
@@ -17,4 +17,4 @@ public:
 };
 
 
-#endif //PIVX_PAIRRESULT_H
+#endif //TUPX_PAIRRESULT_H
