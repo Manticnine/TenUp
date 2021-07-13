@@ -143,5 +143,4 @@ moc_*
 *.tmp
 ui_*
 build*
-tenupd.*
 tenupd-new-gui.*

@@ -1,0 +1,3 @@
+usr/local/bin/tenupd usr/bin
+usr/local/bin/tenup-cli usr/bin
+debian/examples/tenup.conf etc/tenup
