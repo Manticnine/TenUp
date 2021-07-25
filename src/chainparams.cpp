@@ -252,6 +252,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x01cd2cec7147282c3b54233a218b0a68b49e8233318fd253578eea68d0e5bafd"));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
+        consensus.fSkipProofOfWorkCheck = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // TenUp starting difficulty is 1 / 2^12
         consensus.posLimitV1 = ~UINT256_ZERO >> 24;
         consensus.posLimitV2 = ~UINT256_ZERO >> 20;
@@ -301,7 +302,7 @@ public:
         consensus.ZC_MinMintConfirmations = 20;
         consensus.ZC_MinMintFee = 1 * CENT;
         consensus.ZC_MinStakeDepth = 200;
-        consensus.ZC_TimeStart = 1501776000;
+        consensus.ZC_TimeStart = 1628869977;
         consensus.ZC_WrappedSerialsSupply = 0;   // WrappedSerials only on main net
 
         // Network upgrades
@@ -309,14 +310,14 @@ public:
                 Consensus::NetworkUpgrade::ALWAYS_ACTIVE;
         consensus.vUpgrades[Consensus::UPGRADE_TESTDUMMY].nActivationHeight =
                 Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
-        // consensus.vUpgrades[Consensus::UPGRADE_POS].nActivationHeight           = 201;
-        // consensus.vUpgrades[Consensus::UPGRADE_POS_V2].nActivationHeight        = 51197;
-        // consensus.vUpgrades[Consensus::UPGRADE_ZC].nActivationHeight            = 201576;
-        // consensus.vUpgrades[Consensus::UPGRADE_ZC_V2].nActivationHeight         = 444020;
-        // consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight         = 851019;
-        // consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].nActivationHeight     = 1106100;
-        // consensus.vUpgrades[Consensus::UPGRADE_V3_4].nActivationHeight          = 1214000;
-        // consensus.vUpgrades[Consensus::UPGRADE_V4_0].nActivationHeight          = 1347000;
+        consensus.vUpgrades[Consensus::UPGRADE_POS].nActivationHeight           = 50;
+        consensus.vUpgrades[Consensus::UPGRADE_POS_V2].nActivationHeight        = 100;
+        consensus.vUpgrades[Consensus::UPGRADE_ZC].nActivationHeight            = 100;
+        consensus.vUpgrades[Consensus::UPGRADE_ZC_V2].nActivationHeight         = 200;
+        consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight         = 250;
+        consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].nActivationHeight     = 300;
+        consensus.vUpgrades[Consensus::UPGRADE_V3_4].nActivationHeight          = 350;
+        consensus.vUpgrades[Consensus::UPGRADE_V4_0].nActivationHeight          = 400;
         consensus.vUpgrades[Consensus::UPGRADE_V5_DUMMY].nActivationHeight =
                 Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
 

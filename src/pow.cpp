@@ -123,8 +123,11 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
     bool fNegative;
     bool fOverflow;
     uint256 bnTarget;
+    
+    const Consensus::Params& consensus = Params().GetConsensus();
 
     if (Params().IsRegTestNet()) return true;
+    if (consensus.fSkipProofOfWorkCheck) return true;
 
     bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
 

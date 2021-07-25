@@ -211,7 +211,7 @@ void CMasternode::Check(bool forceCheck)
         CMutableTransaction tx = CMutableTransaction();
         CScript dummyScript;
         dummyScript << ToByteVector(pubKeyCollateralAddress) << OP_CHECKSIG;
-        CTxOut vout = CTxOut(9999.99 * COIN, dummyScript);
+        CTxOut vout = CTxOut(24999.99 * COIN, dummyScript);
         tx.vin.push_back(vin);
         tx.vout.push_back(vout);
         {
@@ -307,7 +307,7 @@ bool CMasternode::IsInputAssociatedWithPubkey() const
     uint256 hash;
     if(GetTransaction(vin.prevout.hash, txVin, hash, true)) {
         for (CTxOut out : txVin.vout) {
-            if (out.nValue == 10000 * COIN && out.scriptPubKey == payee) return true;
+            if (out.nValue == 25000 * COIN && out.scriptPubKey == payee) return true;
         }
     }
 
@@ -582,7 +582,7 @@ bool CMasternodeBroadcast::CheckInputsAndAdd(int& nDoS)
     CMutableTransaction tx = CMutableTransaction();
     CScript dummyScript;
     dummyScript << ToByteVector(pubKeyCollateralAddress) << OP_CHECKSIG;
-    CTxOut vout = CTxOut(9999.99 * COIN, dummyScript);
+    CTxOut vout = CTxOut(24999.99 * COIN, dummyScript);
     tx.vin.push_back(vin);
     tx.vout.push_back(vout);
 

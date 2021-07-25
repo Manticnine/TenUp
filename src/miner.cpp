@@ -206,7 +206,14 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
     const Consensus::Params& consensus = Params().GetConsensus();
 
     //!> Block v7: Removes accumulator checkpoints
-    pblock->nVersion = CBlockHeader::CURRENT_VERSION;
+
+    const bool isPoSActive = consensus.NetworkUpgradeActive(nHeight, Consensus::UPGRADE_POS);
+
+    if (!isPoSActive)
+        pblock->nVersion = 3;
+    else
+        pblock->nVersion = CBlockHeader::CURRENT_VERSION;
+
     // -regtest only: allow overriding block.nVersion with
     // -blockversion=N to test forking scenarios
     if (Params().IsRegTestNet()) {
@@ -454,7 +461,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
                 return nullptr;
             }
         }
-
+        pblock->print();
         CValidationState state;
         if (!TestBlockValidity(state, *pblock, pindexPrev, false, false)) {
             LogPrintf("CreateNewBlock() : TestBlockValidity failed\n");
@@ -579,12 +586,13 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
     unsigned int nExtraNonce = 0;
 
     while (fGenerateBitcoins || fProofOfStake) {
+        LogPrintf("fProofOfStake: %s\n", fProofOfStake);
         CBlockIndex* pindexPrev = GetChainTip();
         if (!pindexPrev) {
             MilliSleep(nSpacingMillis);       // sleep a block
             continue;
         }
-        if (fProofOfStake) {
+        if (fProofOfStake == true) {
             if (!consensus.NetworkUpgradeActive(pindexPrev->nHeight + 1, Consensus::UPGRADE_POS)) {
                 // The last PoW block hasn't even been mined yet.
                 MilliSleep(nSpacingMillis);       // sleep a block
@@ -609,7 +617,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
                 continue;
             }
 
-        } else if (consensus.NetworkUpgradeActive(pindexPrev->nHeight - 6, Consensus::UPGRADE_POS)) {
+        } else if (consensus.NetworkUpgradeActive(pindexPrev->nHeight<6 ? pindexPrev->nHeight : pindexPrev->nHeight - 6, Consensus::UPGRADE_POS)) {
             // Late PoW: run for a little while longer, just in case there is a rewind on the chain.
             LogPrintf("%s: Exiting PoW Mining Thread at height: %d\n", __func__, pindexPrev->nHeight);
             return;
