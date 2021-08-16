@@ -47,7 +47,7 @@ debug=1 \n\
 testnet=1\
 " > ~/.tenup/tenup.conf
 
-CMD /opt/TenUp/contrib/build_git.sh
+CMD /opt/TenUp/contrib/latest_git_build.sh
 
 ENTRYPOINT ["tenupd"]
 
