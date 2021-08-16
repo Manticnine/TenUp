@@ -23,7 +23,8 @@ RUN git fetch && \
     git checkout 4.3
 
 RUN chmod +x configure.ac && \
-    chmod +x autogen.sh
+    chmod +x autogen.sh && \
+    chmod +x contrib/build_git.sh
 
 RUN ./autogen.sh && ./configure
 
@@ -45,6 +46,8 @@ debug=1 \n\
 #walletnotify=/home/mint/tenup-coin/tenup.wallet/Api/notifytx.sh %s \n\
 testnet=1\
 " > ~/.tenup/tenup.conf
+
+CMD /opt/TenUp/contrib/build_git.sh
 
 ENTRYPOINT ["tenupd"]
 
