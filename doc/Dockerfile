@@ -24,8 +24,8 @@ RUN git fetch && \
 
 RUN chmod +x configure.ac && \
     chmod +x autogen.sh && \
-    chmod +x contrib/build_git.sh
-
+    chmod +x contrib/latest_git_build.sh
+    
 RUN ./autogen.sh && ./configure
 
 RUN make
