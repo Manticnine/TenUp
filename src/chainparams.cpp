@@ -302,7 +302,7 @@ public:
         consensus.ZC_MinMintConfirmations = 20;
         consensus.ZC_MinMintFee = 1 * CENT;
         consensus.ZC_MinStakeDepth = 200;
-        consensus.ZC_TimeStart = 1628869977;
+        consensus.ZC_TimeStart = 1642605017;
         consensus.ZC_WrappedSerialsSupply = 0;   // WrappedSerials only on main net
 
         // Network upgrades
