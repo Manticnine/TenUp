@@ -1972,7 +1972,7 @@ bool CWallet::GetMasternodeVinAndKeys(CTxIn& txinRet, CPubKey& pubKeyRet, CKey& 
 
     // Masternode collateral value
     if (txOut.nValue != 25000 * COIN) {
-        strError = "Invalid collateral tx value, must be 10,000 TUP";
+        strError = "Invalid collateral tx value, must be 25,000 TUP";
         return error("%s: tx %s, index %d not a masternode collateral", __func__, strTxHash, nOutputIndex);
     }
 
