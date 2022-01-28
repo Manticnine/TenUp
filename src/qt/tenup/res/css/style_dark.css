@@ -81,7 +81,7 @@ QPushButton[cssClass="img-nav-logo"] {
 }
 
 *[cssClass="btn-nav-receive"]:checked:hover  {
-    background-color: #2a62be;
+    background-color: #2660a7;
     color: #9ed6f6;
 }
 
@@ -118,7 +118,7 @@ QPushButton[cssClass="img-nav-logo"] {
 }
 
 *[cssClass="btn-nav-cold-staking"]:checked:hover {
-    background-color: #2a62be;
+    background-color: #2660a7;
     color: #9ed6f6;
 }
 
@@ -209,7 +209,7 @@ QPushButton[cssClass="btn-check-cold-staking"]:checked {
 }
 
 *[cssClass="btn-nav-settings"]:checked:hover  {
-    background-color: #2a62be;
+    background-color: #2660a7;
     color: #9ed6f6;
 }
 
@@ -242,7 +242,7 @@ QPushButton[cssClass="btn-check-cold-staking"]:checked {
 }
 
 *[cssClass="btn-nav-dash"]:checked:hover  {
-    background-color: #2a62be;
+    background-color: #2660a7;
     color: #9ed6f6;
 }
 
@@ -276,7 +276,7 @@ QPushButton[cssClass="btn-check-cold-staking"]:checked {
 }
 
 *[cssClass="btn-nav-send"]:checked:hover  {
-    background-color: #2a62be;
+    background-color: #2660a7;
     color: #9ed6f6;
 }
 
@@ -309,7 +309,7 @@ QPushButton[cssClass="btn-check-cold-staking"]:checked {
 }
 
 *[cssClass="btn-nav-address"]:checked:hover  {
-    background-color: #2a62be;
+    background-color: #2660a7;
     color: #9ed6f6;
 }
 
@@ -343,7 +343,7 @@ QPushButton[cssClass="btn-check-cold-staking"]:checked {
 }
 
 *[cssClass="btn-nav-privacy"]:checked:hover  {
-    background-color: #2a62be;
+    background-color: #2660a7;
     color: #9ed6f6;
 }
 
@@ -377,7 +377,7 @@ QPushButton[cssClass="btn-check-cold-staking"]:checked {
 }
 
 *[cssClass="btn-nav-master"]:checked:hover  {
-    background-color: #2a62be;
+    background-color: #2660a7;
     color: #9ed6f6;
 }
 
@@ -1180,7 +1180,7 @@ QPushButton[cssClass="btn-check-right"]:checked {
 
 QPushButton[cssClass="btn-check-right"]:checked:hover {
     border:  1px solid #886fb7;
-    background-color:#886fb7;
+    background-color:#2660a7;
     font-size:18px;
     padding:4px;
     color: #FFFFFF;
@@ -1239,7 +1239,7 @@ QPushButton[cssClass="btn-check-left"]:checked {
 
 QPushButton[cssClass="btn-check-left"]:checked:hover {
     border:  1px solid #886fb7;
-    background-color:#886fb7;
+    background-color:#2660a7;
     font-size:18px;
     padding:4px;
     color: #FFFFFF;
@@ -1270,7 +1270,7 @@ QPushButton[cssClass="btn-check"]:checked {
 
 QPushButton[cssClass="btn-check"]:checked:hover {
     border:  1px solid #16a6d6;
-    background-color:#16a6d6;
+    background-color:#2660a7;
     font-size:18px;
     padding:4px;
     color: #FFFFFF;
