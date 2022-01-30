@@ -265,8 +265,8 @@ public:
         consensus.nMaxMoneyOut = 75000000 * COIN;
         consensus.nPoolMaxTransactions = 2;
         consensus.nProposalEstablishmentTime = 60 * 5;  // at least 5 min old to make it into a budget
-        consensus.nStakeMinAge = 60 * 60;
-        consensus.nStakeMinDepth = 100;
+        consensus.nStakeMinAge = 60 * 6;
+        consensus.nStakeMinDepth = 10;
         consensus.nTargetTimespan = 40 * 60;
         consensus.nTargetTimespanV2 = 30 * 60;
         consensus.nTargetSpacing = 1 * 60;
@@ -299,25 +299,26 @@ public:
                 "31438167899885040445364023527381951378636564391212010397122822120720357";
         consensus.ZC_MaxPublicSpendsPerTx = 637;    // Assume about 220 bytes each input
         consensus.ZC_MaxSpendsPerTx = 7;            // Assume about 20kb each input
-        consensus.ZC_MinMintConfirmations = 20;
+        consensus.ZC_MinMintConfirmations = 10;
         consensus.ZC_MinMintFee = 1 * CENT;
-        consensus.ZC_MinStakeDepth = 200;
-        consensus.ZC_TimeStart = 1642605017;
+        consensus.ZC_MinStakeDepth = 20;
+        consensus.ZC_TimeStart = 1643344085;
         consensus.ZC_WrappedSerialsSupply = 0;   // WrappedSerials only on main net
 
         // Network upgrades
         consensus.vUpgrades[Consensus::BASE_NETWORK].nActivationHeight =
                 Consensus::NetworkUpgrade::ALWAYS_ACTIVE;
+
         consensus.vUpgrades[Consensus::UPGRADE_TESTDUMMY].nActivationHeight =
                 Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
         consensus.vUpgrades[Consensus::UPGRADE_POS].nActivationHeight           = 50;
-        consensus.vUpgrades[Consensus::UPGRADE_POS_V2].nActivationHeight        = 100;
-        consensus.vUpgrades[Consensus::UPGRADE_ZC].nActivationHeight            = 100;
-        consensus.vUpgrades[Consensus::UPGRADE_ZC_V2].nActivationHeight         = 200;
-        consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight         = 250;
-        consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].nActivationHeight     = 300;
-        consensus.vUpgrades[Consensus::UPGRADE_V3_4].nActivationHeight          = 350;
-        consensus.vUpgrades[Consensus::UPGRADE_V4_0].nActivationHeight          = 400;
+        consensus.vUpgrades[Consensus::UPGRADE_POS_V2].nActivationHeight        = 60;
+        consensus.vUpgrades[Consensus::UPGRADE_ZC].nActivationHeight            = 70;
+        consensus.vUpgrades[Consensus::UPGRADE_ZC_V2].nActivationHeight         = 80;
+        consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight         = 90;
+        consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].nActivationHeight     = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
+        consensus.vUpgrades[Consensus::UPGRADE_V3_4].nActivationHeight          = 100;
+        consensus.vUpgrades[Consensus::UPGRADE_V4_0].nActivationHeight          = 110;
         consensus.vUpgrades[Consensus::UPGRADE_V5_DUMMY].nActivationHeight =
                 Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
 
@@ -348,7 +349,8 @@ public:
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
         vSeeds.push_back(CDNSSeedData("host.docker.internal", "host.docker.internal"));
-
+        vSeeds.push_back(CDNSSeedData("168.235.110.207", "168.235.110.207"));
+        
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 129); // Testnet tenup addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 14);  // Testnet tenup script addresses start with '8' or '9'
         base58Prefixes[STAKING_ADDRESS] = std::vector<unsigned char>(1, 73);     // starting with 'W'
