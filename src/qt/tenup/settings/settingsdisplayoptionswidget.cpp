@@ -108,23 +108,23 @@ void SettingsDisplayOptionsWidget::initLanguages()
     ui->comboBoxLanguage->addItem(defaultStr, QVariant(""));
     QStringList list = translations.entryList();
     int selectedIndex = 0;
-    for (int i = 0; i < list.size(); ++i) {
-        const QString& langStr = list[i];
-        QLocale locale(langStr);
+    // for (int i = 0; i < list.size(); ++i) {
+    //     const QString& langStr = list[i];
+    //     QLocale locale(langStr);
 
-        /** check if the locale name consists of 2 parts (language_country) */
-        if (langStr.contains("_")) {
-            /** display language strings as "native language - native country (locale name)", e.g. "Deutsch - Deutschland (de)" */
-            ui->comboBoxLanguage->addItem(locale.nativeLanguageName() + QString(" - ") + locale.nativeCountryName() + QString(" (") + langStr + QString(")"), QVariant(langStr));
-        } else {
-            /** display language strings as "native language (locale name)", e.g. "Deutsch (de)" */
-            ui->comboBoxLanguage->addItem(locale.nativeLanguageName() + QString(" (") + langStr + QString(")"), QVariant(langStr));
-        }
-        // Save selected index
-        if (langStr == selectedLang) {
-            selectedIndex = i + 1;
-        }
-    }
+    //     /** check if the locale name consists of 2 parts (language_country) */
+    //     if (langStr.contains("_")) {
+    //         /** display language strings as "native language - native country (locale name)", e.g. "Deutsch - Deutschland (de)" */
+    //         ui->comboBoxLanguage->addItem(locale.nativeLanguageName() + QString(" - ") + locale.nativeCountryName() + QString(" (") + langStr + QString(")"), QVariant(langStr));
+    //     } else {
+    //         /** display language strings as "native language (locale name)", e.g. "Deutsch (de)" */
+    //         ui->comboBoxLanguage->addItem(locale.nativeLanguageName() + QString(" (") + langStr + QString(")"), QVariant(langStr));
+    //     }
+    //     // Save selected index
+    //     if (langStr == selectedLang) {
+    //         selectedIndex = i + 1;
+    //     }
+    // }
     ui->comboBoxLanguage->setCurrentIndex(selectedIndex);
 }
 
