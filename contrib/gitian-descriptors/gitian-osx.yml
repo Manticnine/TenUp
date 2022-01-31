@@ -29,7 +29,7 @@ packages:
 - "python3-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/tenup-project/tenup.git"
+- "url": "https://github.com/tenup-coin/tenup.git"
   "dir": "tenup"
 files:
 - "MacOSX10.11.sdk.tar.gz"

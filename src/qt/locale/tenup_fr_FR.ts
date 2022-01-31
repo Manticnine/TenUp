@@ -3841,8 +3841,8 @@ Il y a eu une erreur de sauvegarde de la liste d'adresses vers %1. SVP rééssay
         <translation>2) Pourquoi mes TUP ne peuvent pas être dépensés?</translation>
     </message>
     <message>
-        <source>https://TenUp.org/</source>
-        <translation>https://TenUp.org/</translation>
+        <source>https://tenup.io/</source>
+        <translation>https://tenup.io/</translation>
     </message>
     <message>
         <source>1</source>

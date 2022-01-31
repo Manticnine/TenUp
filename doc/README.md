@@ -26,7 +26,7 @@ Drag TenUp-Qt to your applications folder, and then run TenUp-Qt.
 
 ### Need Help?
 
-* See the documentation at the [TenUp Wiki](https://github.com/TenUp-Project/TenUp/wiki)
+* See the documentation at the [TenUp Wiki](https://github.com/tenup-coin/TenUp/wiki)
 for help and more information.
 * Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [TenUp Forum](http://forum.tenup.org/).
 * Join our Discord server [Discord Server](https://discord.tenup.org)

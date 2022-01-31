@@ -3837,8 +3837,8 @@ Es gab ein Problem bei dem Versuch die Adressen unter %1 zu speichern. Bitte ver
         <translation>2) Wieso kann ich meine TUP nicht ausgeben?</translation>
     </message>
     <message>
-        <source>https://TenUp.org/</source>
-        <translation>https://TenUp.org/</translation>
+        <source>https://tenup.io/</source>
+        <translation>https://tenup.io/</translation>
     </message>
     <message>
         <source>1</source>

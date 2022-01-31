@@ -3743,8 +3743,8 @@ Došlo je do greške prilikom spremanja popisa adresa u %1. Molimo pokušajte po
         <translation>2) Zašto se moji TUP ne mogu potrošiti?</translation>
     </message>
     <message>
-        <source>https://TenUp.org/</source>
-        <translation>https://TenUp.org/</translation>
+        <source>https://tenup.io/</source>
+        <translation>https://tenup.io/</translation>
     </message>
     <message>
         <source>1</source>

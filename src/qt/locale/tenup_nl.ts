@@ -3844,8 +3844,8 @@ Er was een fout opgetreden tijdens het opslaan van deze adreslijst naar %1. Prob
         <translation>2) Waarom is mijn TUP niet besteedbaar?</translation>
     </message>
     <message>
-        <source>https://TenUp.org/</source>
-        <translation>https://TenUp.org/</translation>
+        <source>https://tenup.io/</source>
+        <translation>https://tenup.io/</translation>
     </message>
     <message>
         <source>1</source>

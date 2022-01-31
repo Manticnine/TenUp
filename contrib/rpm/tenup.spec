@@ -20,8 +20,8 @@ Summary:	Peer to Peer Cryptographic Currency
 
 Group:		Applications/System
 License:	MIT
-URL:		https://tenup.org/
-Source0:	https://tenup.org/bin/tenup-core-%{version}/tenup-%{version}.tar.gz
+URL:		https://tenup.io/
+Source0:	https://tenup.io/bin/tenup-core-%{version}/tenup-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
 Source10:	https://raw.githubusercontent.com/tenup-project/tenup/v%{version}/contrib/debian/examples/tenup.conf

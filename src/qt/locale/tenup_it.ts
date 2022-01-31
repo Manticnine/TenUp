@@ -3845,8 +3845,8 @@ Si è verificato un errore nel tentativo di salvare l'elenco degli indirizzi in 
         <translation>2) Perché i miei TUP non sono spendibili?</translation>
     </message>
     <message>
-        <source>https://TenUp.org/</source>
-        <translation>https://TenUp.org/</translation>
+        <source>https://tenup.io/</source>
+        <translation>https://tenup.io/</translation>
     </message>
     <message>
         <source>1</source>
