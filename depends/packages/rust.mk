@@ -1,6 +1,6 @@
 package=rust
 $(package)_version=1.42.0
-$(package)_download_path=https://depends.tenup.org
+$(package)_download_path=https://depends.pivx.org
 $(package)_file_name_linux=rust-$($(package)_version)-x86_64-unknown-linux-gnu.tar.gz
 $(package)_sha256_hash_linux=fce33280b344ab0fecc55be24632a3c0086fd763f4df1d59013dfc0e49f0356c
 $(package)_file_name_darwin=rust-$($(package)_version)-x86_64-apple-darwin.tar.gz
