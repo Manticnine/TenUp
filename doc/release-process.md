@@ -5,7 +5,7 @@ Release Process
 
 ### Before every release candidate
 
-* Update translations (ping Fuzzbawls on Discord) see [translation_process.md](https://github.com/tenup-coin/TenUp/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping Fuzzbawls on Telegram) see [translation_process.md](https://github.com/tenup-coin/TenUp/blob/master/doc/translation_process.md#synchronising-translations).
 * Update manpages, see [gen-manpages.sh](https://github.com/tenup-coin/tenup/blob/master/contrib/devtools/README.md#gen-manpagessh).
 * Update release candidate version in `configure.ac` (`CLIENT_VERSION_RC`)
 

@@ -29,7 +29,7 @@ Drag TenUp-Qt to your applications folder, and then run TenUp-Qt.
 * See the documentation at the [TenUp Wiki](https://github.com/tenup-coin/TenUp/wiki)
 for help and more information.
 * Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [TenUp Forum](http://forum.tenup.org/).
-* Join our Discord server [Discord Server](https://discord.tenup.org)
+* Join our Telegram [Telegram](https://t.me/tenupnation)
 
 Building
 ---------------------
@@ -57,7 +57,7 @@ The TenUp repo's [root README](/README.md) contains relevant information on the 
 
 ### Resources
 * Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [TenUp](http://forum.tenup.org/) forum.
-* Join the [TenUp Discord](https://discord.tenup.org).
+* Join the [TenUp Telegram](https://t.me/tenupnation).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

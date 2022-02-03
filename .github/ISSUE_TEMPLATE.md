@@ -1,7 +1,7 @@
 <!--- Remove this description and sections that do not apply -->
 
 This issue tracker is only for technical issues related to TenUp Core.
-General TenUp questions and/or support requests and are best directed to the [TenUp Discord](https://discord.tenup.org).
+General TenUp questions and/or support requests and are best directed to the [TenUp Telegram](https://t.me/tenupnation).
 
 ### Describe the issue
 
