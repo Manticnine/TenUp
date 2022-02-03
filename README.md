@@ -9,7 +9,7 @@ The goal of TenUp is to achieve a decentralized, sustainable cryptocurrency with
 - Fast transactions featuring guaranteed zero confirmation transactions, we call it _SwiftX_.
 - Decentralized blockchain voting utilizing Masternode technology to form a DAO. The blockchain will distribute monthly treasury funds based on successful proposals submitted by the community and voted on by the DAO.
 
-More information at [tenup.org](http://www.tenup.org) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php?topic=1262920). Join the community at [TenUp Discord](https://discordapp.com/invite/jzqVsJd).
+More information at [tenup.org](http://www.tenup.org) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php?topic=1262920). Join the community at [TenUp Telegram](https://discordapp.com/invite/jzqVsJd).
 
 ### Coin Specs
 <table>
