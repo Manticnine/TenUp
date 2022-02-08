@@ -113,7 +113,7 @@ public:
         consensus.posLimitV2 = ~UINT256_ZERO >> 20;
         consensus.nBudgetCycleBlocks = 43200;       // approx. 1 every 30 days
         consensus.nBudgetFeeConfirmations = 6;      // Number of confirmations for the finalization fee
-        consensus.nCoinbaseMaturity = 100;
+        consensus.nCoinbaseMaturity = 10;
         consensus.nFutureTimeDriftPoW = 7200;
         consensus.nFutureTimeDriftPoS = 180;
         consensus.nMasternodeCountDrift = 20;       // num of MN we allow the see-saw payments to be off by
@@ -130,8 +130,8 @@ public:
         // spork keys
         consensus.strSporkPubKey = "04B433E6598390C992F4F022F20D3B4CBBE691652EE7C48243B81701CBDB7CC7D7BF0EE09E154E6FCBF2043D65AF4E9E97B89B5DBAF830D83B9B7F469A6C45A717";
         consensus.strSporkPubKeyOld = "04B433E6598390C992F4F022F20D3B4CBBE691652EE7C48243B81701CBDB7CC7D7BF0EE09E154E6FCBF2043D65AF4E9E97B89B5DBAF830D83B9B7F469A6C45A717";
-        consensus.nTime_EnforceNewSporkKey = 1521604800;    //!> August 26, 2019 11:00:00 PM GMT
-        consensus.nTime_RejectOldSporkKey = 1522454400;     //!> September 26, 2019 11:00:00 PM GMT
+        consensus.nTime_EnforceNewSporkKey = 1528516800;    //!> August 26, 2019 11:00:00 PM GMT
+        consensus.nTime_RejectOldSporkKey = 1525159000;     //!> September 26, 2019 11:00:00 PM GMT
 
         // height-based activations
         consensus.height_last_ZC_AccumCheckpoint = 1686240;
@@ -142,8 +142,8 @@ public:
         consensus.height_ZC_RecalcAccumulators = 908000;
 
         // validation by-pass
-        consensus.nTenUpBadBlockTime = 1471401614;    // Skip nBit validation of Block 259201 per PR #915
-        consensus.nTenUpBadBlockBits = 0x1c056dac;    // Skip nBit validation of Block 259201 per PR #915
+        consensus.nTenUpBadBlockTime = 1528584028;    // Skip nBit validation of Block 259201 per PR #915
+        consensus.nTenUpBadBlockBits = 0x1e0099ee;    // Skip nBit validation of Block 259201 per PR #915
 
         // Zerocoin-related params
         consensus.ZC_Modulus = "25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784"
@@ -157,7 +157,7 @@ public:
         consensus.ZC_MinMintConfirmations = 20;
         consensus.ZC_MinMintFee = 1 * CENT;
         consensus.ZC_MinStakeDepth = 200;
-        consensus.ZC_TimeStart = 1508214600;        // October 17, 2017 4:30:00 AM
+        consensus.ZC_TimeStart = 1522920605;        // December 31, 2017 11:51:00 AM
         consensus.ZC_WrappedSerialsSupply = 4131563 * COIN;   // zerocoin supply at height_last_ZC_WrappedSerials
 
         // Network upgrades
@@ -165,14 +165,14 @@ public:
                 Consensus::NetworkUpgrade::ALWAYS_ACTIVE;
         consensus.vUpgrades[Consensus::UPGRADE_TESTDUMMY].nActivationHeight =
                 Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
-        consensus.vUpgrades[Consensus::UPGRADE_POS].nActivationHeight           = 259201;
-        consensus.vUpgrades[Consensus::UPGRADE_POS_V2].nActivationHeight        = 615800;
-        consensus.vUpgrades[Consensus::UPGRADE_ZC].nActivationHeight            = 863787;
-        consensus.vUpgrades[Consensus::UPGRADE_ZC_V2].nActivationHeight         = 1153160;
-        consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight         = 1808634;
-        consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].nActivationHeight     = 1880000;
-        consensus.vUpgrades[Consensus::UPGRADE_V3_4].nActivationHeight          = 1967000;
-        consensus.vUpgrades[Consensus::UPGRADE_V4_0].nActivationHeight          = 2153200;
+        consensus.vUpgrades[Consensus::UPGRADE_POS].nActivationHeight           = 201;
+        consensus.vUpgrades[Consensus::UPGRADE_POS_V2].nActivationHeight        = 1950000;
+        consensus.vUpgrades[Consensus::UPGRADE_ZC].nActivationHeight            = 200;
+        consensus.vUpgrades[Consensus::UPGRADE_ZC_V2].nActivationHeight         = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
+        consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight         = 1960000;
+        consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].nActivationHeight     = 1970000;
+        consensus.vUpgrades[Consensus::UPGRADE_V3_4].nActivationHeight          = 1980000;
+        consensus.vUpgrades[Consensus::UPGRADE_V4_0].nActivationHeight          = 1990000;
         consensus.vUpgrades[Consensus::UPGRADE_V5_DUMMY].nActivationHeight =
                 Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
 
@@ -224,7 +224,7 @@ public:
         bech32HRPs[SAPLING_PAYMENT_ADDRESS]      = "ps";
         bech32HRPs[SAPLING_FULL_VIEWING_KEY]     = "pviews";
         bech32HRPs[SAPLING_INCOMING_VIEWING_KEY] = "tupks";
-        bech32HRPs[SAPLING_EXTENDED_SPEND_KEY]         = "p-secret-spending-key-main";
+        bech32HRPs[SAPLING_EXTENDED_SPEND_KEY]   = "p-secret-spending-key-main";
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
