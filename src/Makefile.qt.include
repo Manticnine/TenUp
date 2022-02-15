@@ -2,44 +2,44 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += qt/pivx-qt
+bin_PROGRAMS += qt/tenup-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
-# pivx qt core #
+# tenup qt core #
 QT_TS = \
-  qt/locale/pivx_bg.ts \
-  qt/locale/pivx_ca.ts \
-  qt/locale/pivx_cs.ts \
-  qt/locale/pivx_da.ts \
-  qt/locale/pivx_de.ts \
-  qt/locale/pivx_en.ts \
-  qt/locale/pivx_en_GB.ts \
-  qt/locale/pivx_en_US.ts \
-  qt/locale/pivx_eo.ts \
-  qt/locale/pivx_es.ts \
-  qt/locale/pivx_es_ES.ts \
-  qt/locale/pivx_fi.ts \
-  qt/locale/pivx_fr_FR.ts \
-  qt/locale/pivx_hi_IN.ts \
-  qt/locale/pivx_hr.ts \
-  qt/locale/pivx_hr_HR.ts \
-  qt/locale/pivx_it.ts \
-  qt/locale/pivx_ja.ts \
-  qt/locale/pivx_ko_KR.ts \
-  qt/locale/pivx_lt_LT.ts \
-  qt/locale/pivx_nl.ts \
-  qt/locale/pivx_pl.ts \
-  qt/locale/pivx_pt.ts \
-  qt/locale/pivx_pt_BR.ts \
-  qt/locale/pivx_ro_RO.ts \
-  qt/locale/pivx_ru.ts \
-  qt/locale/pivx_sk.ts \
-  qt/locale/pivx_sv.ts \
-  qt/locale/pivx_tr.ts \
-  qt/locale/pivx_uk.ts \
-  qt/locale/pivx_vi.ts \
-  qt/locale/pivx_zh_CN.ts \
-  qt/locale/pivx_zh_TW.ts
+  qt/locale/tenup_bg.ts \
+  qt/locale/tenup_ca.ts \
+  qt/locale/tenup_cs.ts \
+  qt/locale/tenup_da.ts \
+  qt/locale/tenup_de.ts \
+  qt/locale/tenup_en.ts \
+  qt/locale/tenup_en_GB.ts \
+  qt/locale/tenup_en_US.ts \
+  qt/locale/tenup_eo.ts \
+  qt/locale/tenup_es.ts \
+  qt/locale/tenup_es_ES.ts \
+  qt/locale/tenup_fi.ts \
+  qt/locale/tenup_fr_FR.ts \
+  qt/locale/tenup_hi_IN.ts \
+  qt/locale/tenup_hr.ts \
+  qt/locale/tenup_hr_HR.ts \
+  qt/locale/tenup_it.ts \
+  qt/locale/tenup_ja.ts \
+  qt/locale/tenup_ko_KR.ts \
+  qt/locale/tenup_lt_LT.ts \
+  qt/locale/tenup_nl.ts \
+  qt/locale/tenup_pl.ts \
+  qt/locale/tenup_pt.ts \
+  qt/locale/tenup_pt_BR.ts \
+  qt/locale/tenup_ro_RO.ts \
+  qt/locale/tenup_ru.ts \
+  qt/locale/tenup_sk.ts \
+  qt/locale/tenup_sv.ts \
+  qt/locale/tenup_tr.ts \
+  qt/locale/tenup_uk.ts \
+  qt/locale/tenup_vi.ts \
+  qt/locale/tenup_zh_CN.ts \
+  qt/locale/tenup_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -53,58 +53,58 @@ QT_FORMS_UI = \
   qt/forms/openuridialog.ui \
   qt/forms/optionsdialog.ui \
   qt/forms/rpcconsole.ui \
-  qt/pivx/forms/loadingdialog.ui \
-  qt/forms/zpivcontroldialog.ui \
-  qt/pivx/forms/snackbar.ui \
-  qt/pivx/forms/navmenuwidget.ui \
-  qt/pivx/forms/lockunlock.ui \
-  qt/pivx/forms/expandablebutton.ui \
-  qt/pivx/forms/receivedialog.ui \
-  qt/pivx/forms/walletpassworddialog.ui \
-  qt/pivx/forms/topbar.ui \
-  qt/pivx/forms/txrow.ui \
-  qt/pivx/forms/dashboardwidget.ui \
-  qt/pivx/forms/coincontrolpivwidget.ui \
-  qt/pivx/forms/addresslabelrow.ui \
-  qt/pivx/forms/contactdropdownrow.ui \
-  qt/pivx/forms/mninfodialog.ui \
-  qt/pivx/forms/optionbutton.ui \
-  qt/pivx/forms/masternodewizarddialog.ui \
-  qt/pivx/forms/mnrow.ui \
-  qt/pivx/forms/masternodeswidget.ui \
-  qt/pivx/forms/myaddressrow.ui \
-  qt/pivx/forms/csrow.ui \
-  qt/pivx/forms/sendchangeaddressdialog.ui \
-  qt/pivx/forms/sendconfirmdialog.ui \
-  qt/pivx/forms/sendcustomfeedialog.ui \
-  qt/pivx/forms/sendchangeaddressdialog.ui \
-  qt/pivx/forms/sendmultirow.ui \
-  qt/pivx/forms/send.ui \
-  qt/pivx/forms/addnewaddressdialog.ui \
-  qt/pivx/forms/addnewcontactdialog.ui \
-  qt/pivx/forms/requestdialog.ui \
-  qt/pivx/forms/receivewidget.ui \
-  qt/pivx/forms/tooltipmenu.ui \
-  qt/pivx/forms/addresseswidget.ui \
-  qt/pivx/forms/defaultdialog.ui \
-  qt/pivx/forms/denomgenerationdialog.ui \
-  qt/pivx/forms/privacywidget.ui \
-  qt/pivx/forms/coldstakingwidget.ui \
-  qt/pivx/settings/forms/settingsbackupwallet.ui \
-  qt/pivx/settings/forms/settingsbittoolwidget.ui \
-  qt/pivx/settings/forms/settingsconsolewidget.ui \
-  qt/pivx/settings/forms/settingsdisplayoptionswidget.ui \
-  qt/pivx/settings/forms/settingsfaqwidget.ui \
-  qt/pivx/settings/forms/settingsinformationwidget.ui \
-  qt/pivx/settings/forms/settingsmainoptionswidget.ui \
-  qt/pivx/settings/forms/settingsmultisenddialog.ui \
-  qt/pivx/settings/forms/settingsmultisendwidget.ui \
-  qt/pivx/settings/forms/settingssignmessagewidgets.ui \
-  qt/pivx/settings/forms/settingswalletoptionswidget.ui \
-  qt/pivx/settings/forms/settingswalletrepairwidget.ui \
-  qt/pivx/settings/forms/settingswidget.ui \
-  qt/pivx/forms/welcomecontentwidget.ui \
-  qt/pivx/forms/splash.ui
+  qt/tenup/forms/loadingdialog.ui \
+  qt/forms/ztupcontroldialog.ui \
+  qt/tenup/forms/snackbar.ui \
+  qt/tenup/forms/navmenuwidget.ui \
+  qt/tenup/forms/lockunlock.ui \
+  qt/tenup/forms/expandablebutton.ui \
+  qt/tenup/forms/receivedialog.ui \
+  qt/tenup/forms/walletpassworddialog.ui \
+  qt/tenup/forms/topbar.ui \
+  qt/tenup/forms/txrow.ui \
+  qt/tenup/forms/dashboardwidget.ui \
+  qt/tenup/forms/coincontroltupwidget.ui \
+  qt/tenup/forms/addresslabelrow.ui \
+  qt/tenup/forms/contactdropdownrow.ui \
+  qt/tenup/forms/mninfodialog.ui \
+  qt/tenup/forms/optionbutton.ui \
+  qt/tenup/forms/masternodewizarddialog.ui \
+  qt/tenup/forms/mnrow.ui \
+  qt/tenup/forms/masternodeswidget.ui \
+  qt/tenup/forms/myaddressrow.ui \
+  qt/tenup/forms/csrow.ui \
+  qt/tenup/forms/sendchangeaddressdialog.ui \
+  qt/tenup/forms/sendconfirmdialog.ui \
+  qt/tenup/forms/sendcustomfeedialog.ui \
+  qt/tenup/forms/sendchangeaddressdialog.ui \
+  qt/tenup/forms/sendmultirow.ui \
+  qt/tenup/forms/send.ui \
+  qt/tenup/forms/addnewaddressdialog.ui \
+  qt/tenup/forms/addnewcontactdialog.ui \
+  qt/tenup/forms/requestdialog.ui \
+  qt/tenup/forms/receivewidget.ui \
+  qt/tenup/forms/tooltipmenu.ui \
+  qt/tenup/forms/addresseswidget.ui \
+  qt/tenup/forms/defaultdialog.ui \
+  qt/tenup/forms/denomgenerationdialog.ui \
+  qt/tenup/forms/privacywidget.ui \
+  qt/tenup/forms/coldstakingwidget.ui \
+  qt/tenup/settings/forms/settingsbackupwallet.ui \
+  qt/tenup/settings/forms/settingsbittoolwidget.ui \
+  qt/tenup/settings/forms/settingsconsolewidget.ui \
+  qt/tenup/settings/forms/settingsdisplayoptionswidget.ui \
+  qt/tenup/settings/forms/settingsfaqwidget.ui \
+  qt/tenup/settings/forms/settingsinformationwidget.ui \
+  qt/tenup/settings/forms/settingsmainoptionswidget.ui \
+  qt/tenup/settings/forms/settingsmultisenddialog.ui \
+  qt/tenup/settings/forms/settingsmultisendwidget.ui \
+  qt/tenup/settings/forms/settingssignmessagewidgets.ui \
+  qt/tenup/settings/forms/settingswalletoptionswidget.ui \
+  qt/tenup/settings/forms/settingswalletrepairwidget.ui \
+  qt/tenup/settings/forms/settingswidget.ui \
+  qt/tenup/forms/welcomecontentwidget.ui \
+  qt/tenup/forms/splash.ui
 
 QT_MOC_CPP = \
   qt/moc_addressbookpage.cpp \
@@ -113,7 +113,7 @@ QT_MOC_CPP = \
   qt/moc_bantablemodel.cpp \
   qt/moc_bitcoinaddressvalidator.cpp \
   qt/moc_bitcoinamountfield.cpp \
-  qt/pivx/moc_pivxgui.cpp \
+  qt/tenup/moc_tenupgui.cpp \
   qt/moc_bitcoinunits.cpp \
   qt/moc_blockexplorer.cpp \
   qt/moc_clientmodel.cpp \
@@ -144,80 +144,80 @@ QT_MOC_CPP = \
   qt/moc_transactiontablemodel.cpp \
   qt/moc_utilitydialog.cpp \
   qt/moc_walletmodel.cpp \
-  qt/pivx/moc_loadingdialog.cpp \
-  qt/moc_zpivcontroldialog.cpp \
-  qt/pivx/moc_pwidget.cpp \
-  qt/pivx/moc_snackbar.cpp \
-  qt/pivx/moc_navmenuwidget.cpp \
-  qt/pivx/moc_lockunlock.cpp \
-  qt/pivx/moc_expandablebutton.cpp \
-  qt/pivx/moc_furabstractlistitemdelegate.cpp \
-  qt/pivx/moc_receivedialog.cpp \
-  qt/pivx/moc_walletpassworddialog.cpp \
-  qt/pivx/moc_pfborderimage.cpp \
-  qt/pivx/moc_topbar.cpp \
-  qt/pivx/moc_txrow.cpp \
-  qt/pivx/moc_dashboardwidget.cpp \
-  qt/pivx/moc_coincontrolpivwidget.cpp \
-  qt/pivx/moc_addresslabelrow.cpp \
-  qt/pivx/moc_contactdropdownrow.cpp \
-  qt/pivx/moc_mninfodialog.cpp \
-  qt/pivx/moc_optionbutton.cpp \
-  qt/pivx/moc_coldstakingmodel.cpp \
-  qt/pivx/moc_mnmodel.cpp \
-  qt/pivx/moc_masternodewizarddialog.cpp \
-  qt/pivx/moc_mnrow.cpp \
-  qt/pivx/moc_masternodeswidget.cpp \
-  qt/pivx/moc_myaddressrow.cpp \
-  qt/pivx/moc_csrow.cpp \
-  qt/pivx/moc_contactsdropdown.cpp \
-  qt/pivx/moc_sendchangeaddressdialog.cpp \
-  qt/pivx/moc_sendconfirmdialog.cpp \
-  qt/pivx/moc_sendcustomfeedialog.cpp \
-  qt/pivx/moc_sendchangeaddressdialog.cpp \
-  qt/pivx/moc_sendmultirow.cpp \
-  qt/pivx/moc_send.cpp \
-  qt/pivx/moc_addnewaddressdialog.cpp \
-  qt/pivx/moc_addnewcontactdialog.cpp \
-  qt/pivx/moc_requestdialog.cpp \
-  qt/pivx/moc_receivewidget.cpp \
-  qt/pivx/moc_tooltipmenu.cpp \
-  qt/pivx/moc_addresseswidget.cpp \
-  qt/pivx/moc_defaultdialog.cpp \
-  qt/pivx/moc_denomgenerationdialog.cpp \
-  qt/pivx/moc_privacywidget.cpp \
-  qt/pivx/moc_coldstakingwidget.cpp \
-  qt/pivx/settings/moc_settingsbackupwallet.cpp \
-  qt/pivx/settings/moc_settingsbittoolwidget.cpp \
-  qt/pivx/settings/moc_settingsconsolewidget.cpp \
-  qt/pivx/settings/moc_settingsdisplayoptionswidget.cpp \
-  qt/pivx/settings/moc_settingsfaqwidget.cpp \
-  qt/pivx/settings/moc_settingsinformationwidget.cpp \
-  qt/pivx/settings/moc_settingsmainoptionswidget.cpp \
-  qt/pivx/settings/moc_settingsmultisenddialog.cpp \
-  qt/pivx/settings/moc_settingsmultisendwidget.cpp \
-  qt/pivx/settings/moc_settingssignmessagewidgets.cpp \
-  qt/pivx/settings/moc_settingswalletoptionswidget.cpp \
-  qt/pivx/settings/moc_settingswalletrepairwidget.cpp \
-  qt/pivx/settings/moc_settingswidget.cpp \
-  qt/pivx/moc_welcomecontentwidget.cpp \
-  qt/pivx/moc_splash.cpp
+  qt/tenup/moc_loadingdialog.cpp \
+  qt/moc_ztupcontroldialog.cpp \
+  qt/tenup/moc_pwidget.cpp \
+  qt/tenup/moc_snackbar.cpp \
+  qt/tenup/moc_navmenuwidget.cpp \
+  qt/tenup/moc_lockunlock.cpp \
+  qt/tenup/moc_expandablebutton.cpp \
+  qt/tenup/moc_furabstractlistitemdelegate.cpp \
+  qt/tenup/moc_receivedialog.cpp \
+  qt/tenup/moc_walletpassworddialog.cpp \
+  qt/tenup/moc_pfborderimage.cpp \
+  qt/tenup/moc_topbar.cpp \
+  qt/tenup/moc_txrow.cpp \
+  qt/tenup/moc_dashboardwidget.cpp \
+  qt/tenup/moc_coincontroltupwidget.cpp \
+  qt/tenup/moc_addresslabelrow.cpp \
+  qt/tenup/moc_contactdropdownrow.cpp \
+  qt/tenup/moc_mninfodialog.cpp \
+  qt/tenup/moc_optionbutton.cpp \
+  qt/tenup/moc_coldstakingmodel.cpp \
+  qt/tenup/moc_mnmodel.cpp \
+  qt/tenup/moc_masternodewizarddialog.cpp \
+  qt/tenup/moc_mnrow.cpp \
+  qt/tenup/moc_masternodeswidget.cpp \
+  qt/tenup/moc_myaddressrow.cpp \
+  qt/tenup/moc_csrow.cpp \
+  qt/tenup/moc_contactsdropdown.cpp \
+  qt/tenup/moc_sendchangeaddressdialog.cpp \
+  qt/tenup/moc_sendconfirmdialog.cpp \
+  qt/tenup/moc_sendcustomfeedialog.cpp \
+  qt/tenup/moc_sendchangeaddressdialog.cpp \
+  qt/tenup/moc_sendmultirow.cpp \
+  qt/tenup/moc_send.cpp \
+  qt/tenup/moc_addnewaddressdialog.cpp \
+  qt/tenup/moc_addnewcontactdialog.cpp \
+  qt/tenup/moc_requestdialog.cpp \
+  qt/tenup/moc_receivewidget.cpp \
+  qt/tenup/moc_tooltipmenu.cpp \
+  qt/tenup/moc_addresseswidget.cpp \
+  qt/tenup/moc_defaultdialog.cpp \
+  qt/tenup/moc_denomgenerationdialog.cpp \
+  qt/tenup/moc_privacywidget.cpp \
+  qt/tenup/moc_coldstakingwidget.cpp \
+  qt/tenup/settings/moc_settingsbackupwallet.cpp \
+  qt/tenup/settings/moc_settingsbittoolwidget.cpp \
+  qt/tenup/settings/moc_settingsconsolewidget.cpp \
+  qt/tenup/settings/moc_settingsdisplayoptionswidget.cpp \
+  qt/tenup/settings/moc_settingsfaqwidget.cpp \
+  qt/tenup/settings/moc_settingsinformationwidget.cpp \
+  qt/tenup/settings/moc_settingsmainoptionswidget.cpp \
+  qt/tenup/settings/moc_settingsmultisenddialog.cpp \
+  qt/tenup/settings/moc_settingsmultisendwidget.cpp \
+  qt/tenup/settings/moc_settingssignmessagewidgets.cpp \
+  qt/tenup/settings/moc_settingswalletoptionswidget.cpp \
+  qt/tenup/settings/moc_settingswalletrepairwidget.cpp \
+  qt/tenup/settings/moc_settingswidget.cpp \
+  qt/tenup/moc_welcomecontentwidget.cpp \
+  qt/tenup/moc_splash.cpp
 
 BITCOIN_MM = \
   qt/macdockiconhandler.mm \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/pivx.moc \
+  qt/tenup.moc \
   qt/bitcoinamountfield.moc \
   qt/intro.moc \
   qt/rpcconsole.moc \
-  qt/pivx/settings/moc_settingsconsolewidget.cpp
+  qt/tenup/settings/moc_settingsconsolewidget.cpp
 
-QT_QRC_CPP = qt/qrc_pivx.cpp
-QT_QRC = qt/pivx.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_pivx_locale.cpp
-QT_QRC_LOCALE = qt/pivx_locale.qrc
+QT_QRC_CPP = qt/qrc_tenup.cpp
+QT_QRC = qt/tenup.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_tenup_locale.cpp
+QT_QRC_LOCALE = qt/tenup_locale.qrc
 
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
@@ -230,7 +230,7 @@ BITCOIN_QT_H = \
   qt/bantablemodel.h \
   qt/bitcoinaddressvalidator.h \
   qt/bitcoinamountfield.h \
-  qt/pivx/pivxgui.h \
+  qt/tenup/tenupgui.h \
   qt/bitcoinunits.h \
   qt/blockexplorer.h \
   qt/clientmodel.h \
@@ -267,72 +267,72 @@ BITCOIN_QT_H = \
   qt/utilitydialog.h \
   qt/walletmodel.h \
   qt/walletmodeltransaction.h \
-  qt/pivx/prunnable.h \
-  qt/pivx/pfborderimage.h \
-  qt/pivx/loadingdialog.h \
+  qt/tenup/prunnable.h \
+  qt/tenup/pfborderimage.h \
+  qt/tenup/loadingdialog.h \
   qt/winshutdownmonitor.h \
-  qt/zpivcontroldialog.h \
-  qt/pivx/pwidget.h \
-  qt/pivx/guitransactionsutils.h \
-  qt/pivx/snackbar.h \
-  qt/pivx/navmenuwidget.h \
-  qt/pivx/lockunlock.h \
-  qt/pivx/receivedialog.h \
-  qt/pivx/furlistrow.h \
-  qt/pivx/furabstractlistitemdelegate.h \
-  qt/pivx/txviewholder.h \
-  qt/pivx/qtutils.h \
-  qt/pivx/expandablebutton.h \
-  qt/pivx/walletpassworddialog.h \
-  qt/pivx/topbar.h \
-  qt/pivx/txrow.h \
-  qt/pivx/addressholder.h \
-  qt/pivx/addressfilterproxymodel.h \
-  qt/pivx/dashboardwidget.h \
-  qt/pivx/coincontrolpivwidget.h \
-  qt/pivx/addresslabelrow.h \
-  qt/pivx/contactdropdownrow.h \
-  qt/pivx/mninfodialog.h \
-  qt/pivx/optionbutton.h \
-  qt/pivx/coldstakingmodel.h \
-  qt/pivx/mnmodel.h \
-  qt/pivx/masternodewizarddialog.h \
-  qt/pivx/mnrow.h \
-  qt/pivx/masternodeswidget.h \
-  qt/pivx/myaddressrow.h \
-  qt/pivx/csrow.h \
-  qt/pivx/contactsdropdown.h \
-  qt/pivx/sendchangeaddressdialog.h \
-  qt/pivx/sendconfirmdialog.h \
-  qt/pivx/sendcustomfeedialog.h \
-  qt/pivx/sendchangeaddressdialog.h \
-  qt/pivx/sendmultirow.h \
-  qt/pivx/send.h \
-  qt/pivx/addnewaddressdialog.h \
-  qt/pivx/addnewcontactdialog.h \
-  qt/pivx/requestdialog.h \
-  qt/pivx/receivewidget.h \
-  qt/pivx/tooltipmenu.h \
-  qt/pivx/addresseswidget.h \
-  qt/pivx/defaultdialog.h \
-  qt/pivx/denomgenerationdialog.h \
-  qt/pivx/privacywidget.h \
-  qt/pivx/coldstakingwidget.h \
-  qt/pivx/settings/settingsbackupwallet.h \
-  qt/pivx/settings/settingsbittoolwidget.h \
-  qt/pivx/settings/settingsconsolewidget.h \
-  qt/pivx/settings/settingsdisplayoptionswidget.h \
-  qt/pivx/settings/settingsfaqwidget.h \
-  qt/pivx/settings/settingsinformationwidget.h \
-  qt/pivx/settings/settingsmainoptionswidget.h \
-  qt/pivx/settings/settingsmultisenddialog.h \
-  qt/pivx/settings/settingsmultisendwidget.h \
-  qt/pivx/settings/settingssignmessagewidgets.h \
-  qt/pivx/settings/settingswalletoptionswidget.h \
-  qt/pivx/settings/settingswalletrepairwidget.h \
-  qt/pivx/settings/settingswidget.h \
-  qt/pivx/welcomecontentwidget.h \
-  qt/pivx/splash.h
+  qt/ztupcontroldialog.h \
+  qt/tenup/pwidget.h \
+  qt/tenup/guitransactionsutils.h \
+  qt/tenup/snackbar.h \
+  qt/tenup/navmenuwidget.h \
+  qt/tenup/lockunlock.h \
+  qt/tenup/receivedialog.h \
+  qt/tenup/furlistrow.h \
+  qt/tenup/furabstractlistitemdelegate.h \
+  qt/tenup/txviewholder.h \
+  qt/tenup/qtutils.h \
+  qt/tenup/expandablebutton.h \
+  qt/tenup/walletpassworddialog.h \
+  qt/tenup/topbar.h \
+  qt/tenup/txrow.h \
+  qt/tenup/addressholder.h \
+  qt/tenup/addressfilterproxymodel.h \
+  qt/tenup/dashboardwidget.h \
+  qt/tenup/coincontroltupwidget.h \
+  qt/tenup/addresslabelrow.h \
+  qt/tenup/contactdropdownrow.h \
+  qt/tenup/mninfodialog.h \
+  qt/tenup/optionbutton.h \
+  qt/tenup/coldstakingmodel.h \
+  qt/tenup/mnmodel.h \
+  qt/tenup/masternodewizarddialog.h \
+  qt/tenup/mnrow.h \
+  qt/tenup/masternodeswidget.h \
+  qt/tenup/myaddressrow.h \
+  qt/tenup/csrow.h \
+  qt/tenup/contactsdropdown.h \
+  qt/tenup/sendchangeaddressdialog.h \
+  qt/tenup/sendconfirmdialog.h \
+  qt/tenup/sendcustomfeedialog.h \
+  qt/tenup/sendchangeaddressdialog.h \
+  qt/tenup/sendmultirow.h \
+  qt/tenup/send.h \
+  qt/tenup/addnewaddressdialog.h \
+  qt/tenup/addnewcontactdialog.h \
+  qt/tenup/requestdialog.h \
+  qt/tenup/receivewidget.h \
+  qt/tenup/tooltipmenu.h \
+  qt/tenup/addresseswidget.h \
+  qt/tenup/defaultdialog.h \
+  qt/tenup/denomgenerationdialog.h \
+  qt/tenup/privacywidget.h \
+  qt/tenup/coldstakingwidget.h \
+  qt/tenup/settings/settingsbackupwallet.h \
+  qt/tenup/settings/settingsbittoolwidget.h \
+  qt/tenup/settings/settingsconsolewidget.h \
+  qt/tenup/settings/settingsdisplayoptionswidget.h \
+  qt/tenup/settings/settingsfaqwidget.h \
+  qt/tenup/settings/settingsinformationwidget.h \
+  qt/tenup/settings/settingsmainoptionswidget.h \
+  qt/tenup/settings/settingsmultisenddialog.h \
+  qt/tenup/settings/settingsmultisendwidget.h \
+  qt/tenup/settings/settingssignmessagewidgets.h \
+  qt/tenup/settings/settingswalletoptionswidget.h \
+  qt/tenup/settings/settingswalletrepairwidget.h \
+  qt/tenup/settings/settingswidget.h \
+  qt/tenup/welcomecontentwidget.h \
+  qt/tenup/splash.h
 
 RES_ICONS = \
   qt/res/icons/add.png \
@@ -398,218 +398,218 @@ RES_ICONS = \
   qt/res/icons/ic-transaction-mint.svg \
   qt/res/icons/ic-transaction-sent.svg \
   qt/res/icons/ic-transaction-staked.svg \
-  qt/res/icons/unit_pivx.png \
-  qt/res/icons/unit_mpivx.png \
-  qt/res/icons/unit_upivx.png \
-  qt/res/icons/unit_tpivx.png \
-  qt/res/icons/unit_tmpivx.png \
-  qt/res/icons/unit_tupivx.png \
+  qt/res/icons/unit_tenup.png \
+  qt/res/icons/unit_mtenup.png \
+  qt/res/icons/unit_utenup.png \
+  qt/res/icons/unit_ttenup.png \
+  qt/res/icons/unit_tmtenup.png \
+  qt/res/icons/unit_tutenup.png \
   qt/res/icons/yesvote.png \
   qt/res/icons/novote.png \
   qt/res/icons/abstainvote.png \
-  qt/pivx/res/img/bg-dashboard-banner.png \
-  qt/pivx/res/img/bg-multi-number-dark.svg \
-  qt/pivx/res/img/ic-check-locked.svg \
-  qt/pivx/res/img/ic-nav-address.svg \
-  qt/pivx/res/img/ic-update.svg \
-  qt/pivx/res/img/bg-multi-number.svg \
-  qt/pivx/res/img/ic-check-mint-off.svg \
-  qt/pivx/res/img/ic-nav-cold-staking.svg \
-  qt/pivx/res/img/ic-nav-cold-staking-active.svg \
-  qt/pivx/res/img/ic-nav-dashboard-active.svg \
-  qt/pivx/res/img/ic-wallet-status-locked.svg \
-  qt/pivx/res/img/bg-splash.svg \
-  qt/pivx/res/img/bg-splash.png \
-  qt/pivx/res/img/ic-check-mint.svg \
-  qt/pivx/res/img/ic-nav-dashboard-hover.svg \
-  qt/pivx/res/img/ic-wallet-status-staking.svg \
-  qt/pivx/res/img/ic-check-peers-off.svg \
-  qt/pivx/res/img/ic-nav-dashboard.svg \
-  qt/pivx/res/img/ic-wallet-status-unlocked.svg \
-  qt/pivx/res/img/ic-check-peers.svg \
-  qt/pivx/res/img/ic-nav-master-active.svg \
-  qt/pivx/res/img/ic-watch-password-white.svg \
-  qt/pivx/res/img/bg-welcome-container.jpg \
-  qt/pivx/res/img/bg-welcome-container.png \
-  qt/pivx/res/img/bg-welcome-container.svg \
-  qt/pivx/res/img/bg-welcome-container@2x.png \
-  qt/pivx/res/img/bg-welcome-container@3x.png \
-  qt/pivx/res/img/ic-check-staking-off.svg \
-  qt/pivx/res/img/ic-nav-master-hover.svg \
-  qt/pivx/res/img/ic-watch-password.svg \
-  qt/pivx/res/img/bg-welcome.jpg \
-  qt/pivx/res/img/bg-welcome.svg \
-  qt/pivx/res/img/bg-welcome@2x.jpg \
-  qt/pivx/res/img/bg-welcome@3x.jpg \
-  qt/pivx/res/img/bg-welcome.png \
-  qt/pivx/res/img/ic-check-staking.svg \
-  qt/pivx/res/img/ic-nav-master.svg \
-  qt/pivx/res/img/img-dashboard-banner.jpg \
-  qt/pivx/res/img/btn-radio-active.svg \
-  qt/pivx/res/img/ic-check-sync-off.svg \
-  qt/pivx/res/img/ic-nav-privacy-active.svg \
-  qt/pivx/res/img/img-empty-contacts.svg \
-  qt/pivx/res/img/btn-radio-off.svg \
-  qt/pivx/res/img/ic-check-sync.png \
-  qt/pivx/res/img/ic-nav-privacy-hover.svg \
-  qt/pivx/res/img/img-empty-dark-contacts.svg \
-  qt/pivx/res/img/ic-contact-arrow-down.svg \
-  qt/pivx/res/img/ic-contact-arrow-down-white.svg \
-  qt/pivx/res/img/ic-check-sync.svg \
-  qt/pivx/res/img/ic-check-faq.svg \
-  qt/pivx/res/img/ic-nav-privacy.svg \
-  qt/pivx/res/img/img-empty-dark-error.svg \
-  qt/pivx/res/img/ic-add-label.svg \
-  qt/pivx/res/img/ic-pending.svg \
-  qt/pivx/res/img/ic-check-theme-dark.svg \
-  qt/pivx/res/img/ic-nav-receive-active.svg \
-  qt/pivx/res/img/img-empty-dark-masternode.svg \
-  qt/pivx/res/img/ic-add-liliac.svg \
-  qt/pivx/res/img/ic-check-theme-light.svg \
-  qt/pivx/res/img/ic-nav-receive-hover.svg \
-  qt/pivx/res/img/img-empty-dark-multisend.svg \
-  qt/pivx/res/img/ic-add-purple.svg \
-  qt/pivx/res/img/ic-check-white.svg \
-  qt/pivx/res/img/ic-nav-receive.svg \
-  qt/pivx/res/img/img-empty-dark-peers.svg \
-  qt/pivx/res/img/ic-add.svg \
-  qt/pivx/res/img/ic-check.svg \
-  qt/pivx/res/img/ic-nav-send-active.svg \
-  qt/pivx/res/img/img-empty-dark-staking-off.svg \
-  qt/pivx/res/img/img-empty-dark-staking-on.svg \
-  qt/pivx/res/img/ic-address-book-grey.svg \
-  qt/pivx/res/img/ic-chevron-left.svg \
-  qt/pivx/res/img/ic-nav-send-hover.svg \
-  qt/pivx/res/img/img-empty-dark-transactions.svg \
-  qt/pivx/res/img/ic-address-book-white.svg \
-  qt/pivx/res/img/ic-chevron-right.svg \
-  qt/pivx/res/img/ic-nav-send.svg \
-  qt/pivx/res/img/img-empty-error.svg \
-  qt/pivx/res/img/ic-address-book.svg \
-  qt/pivx/res/img/ic-clear-liliac.svg \
-  qt/pivx/res/img/ic-nav-settings-active.svg \
-  qt/pivx/res/img/img-empty-masternode.svg \
-  qt/pivx/res/img/ic-address-send-white.svg \
-  qt/pivx/res/img/ic-clear-purple.svg \
-  qt/pivx/res/img/ic-nav-settings-hover.svg \
-  qt/pivx/res/img/img-empty-multisend.svg \
-  qt/pivx/res/img/ic-address-send.svg \
-  qt/pivx/res/img/ic-close-white.svg \
-  qt/pivx/res/img/ic-nav-settings.svg \
-  qt/pivx/res/img/img-empty-peers.svg \
-  qt/pivx/res/img/img-empty-privacy.svg \
-  qt/pivx/res/img/img-empty-privacy-dark.svg \
-  qt/pivx/res/img/ic-arrow-drop-down-white.svg \
-  qt/pivx/res/img/ic-close.svg \
-  qt/pivx/res/img/ic-radio-liliac-on.svg \
-  qt/pivx/res/img/img-empty-staking-off.svg \
-  qt/pivx/res/img/ic-arrow-drop-down.svg \
-  qt/pivx/res/img/ic-coin-piv.svg \
-  qt/pivx/res/img/ic-receive-off.svg \
-  qt/pivx/res/img/img-empty-staking-on.svg \
-  qt/pivx/res/img/ic-arrow-drop-up-white.svg \
-  qt/pivx/res/img/ic-coin-zpiv.png \
-  qt/pivx/res/img/ic-receive-on.svg \
-  qt/pivx/res/img/img-empty-transactions.svg \
-  qt/pivx/res/img/ic-arrow-drop-up.svg \
-  qt/pivx/res/img/ic-coin-zpiv.svg \
-  qt/pivx/res/img/ic-received.svg \
-  qt/pivx/res/img/img-logo-pivx.png \
-  qt/pivx/res/img/ic-arrow-drop-white-down.svg \
-  qt/pivx/res/img/ic-combo-box.svg \
-  qt/pivx/res/img/ic-send.svg \
-  qt/pivx/res/img/img-logo-pivx@2x.png \
-  qt/pivx/res/img/ic-arrow-purple-down.svg \
-  qt/pivx/res/img/ic-connect.svg \
-  qt/pivx/res/img/ic-submenu-lock.svg \
-  qt/pivx/res/img/img-logo-pivx@3x.png \
-  qt/pivx/res/img/img-logo-pivx.svg \
-  qt/pivx/res/img/ic-arrow-right-white.svg \
-  qt/pivx/res/img/ic-arrow-left-white.svg \
-  qt/pivx/res/img/ic-arrow-left.svg \
-  qt/pivx/res/img/ic-copy-liliac.svg \
-  qt/pivx/res/img/ic-submenu-staking.svg \
-  qt/pivx/res/img/img-nav-logo-pivx.png \
-  qt/pivx/res/img/ic-arrow-right.svg \
-  qt/pivx/res/img/ic-copy.svg \
-  qt/pivx/res/img/ic-copy-big.svg \
-  qt/pivx/res/img/ic-copy-big-white.svg \
-  qt/pivx/res/img/ic-submenu-unlock.svg \
-  qt/pivx/res/img/img-nav-logo.png \
-  qt/pivx/res/img/ic-arrow-white-left.svg \
-  qt/pivx/res/img/ic-exit.svg \
-  qt/pivx/res/img/ic-switch-liliac-on.svg \
-  qt/pivx/res/img/img-nav-logo.svg \
-  qt/pivx/res/img/ic-arrow-white-right.svg \
-  qt/pivx/res/img/ic-expand.svg \
-  qt/pivx/res/img/ic-switch-off.svg \
-  qt/pivx/res/img/img-qr-test-big.png \
-  qt/pivx/res/img/ic-check-active.svg \
-  qt/pivx/res/img/ic-folder.svg \
-  qt/pivx/res/img/ic-switch-on.svg \
-  qt/pivx/res/img/img-qr-test.png \
-  qt/pivx/res/img/ic-check-box.svg \
-  qt/pivx/res/img/ic-check-box-dark-active.svg \
-  qt/pivx/res/img/ic-check-box-indeterminate.svg \
-  qt/pivx/res/img/ic-check-box-liliac-indeterminate.svg \
-  qt/pivx/res/img/ic-label-liliac.svg \
-  qt/pivx/res/img/ic-transaction-warning.svg \
-  qt/pivx/res/img/ic-transaction-mint.svg \
-  qt/pivx/res/img/ic-transaction-mint-inactive.svg \
-  qt/pivx/res/img/ic-check-cold-staking.svg \
-  qt/pivx/res/img/ic-check-cold-staking-off.svg \
-  qt/pivx/res/img/ic-check-cold-staking-enabled.svg \
-  qt/pivx/res/img/dark/ic-transaction-cs-contract.svg \
-  qt/pivx/res/img/dark/ic-transaction-cs-contract-inactive.svg \
-  qt/pivx/res/img/img-qr.svg \
-  qt/pivx/res/img/ic-check-connect-off.svg \
-  qt/pivx/res/img/ic-label.svg \
-  qt/pivx/res/img/ic-transaction-received.svg \
-  qt/pivx/res/img/dark/ic-transaction-received.svg \
-  qt/pivx/res/img/dark/ic-transaction-warning.svg \
-  qt/pivx/res/img/dark/ic-transaction-mint.svg \
-  qt/pivx/res/img/dark/ic-transaction-mint-inactive.svg \
-  qt/pivx/res/img/ic-transaction-received-inactive.svg \
-  qt/pivx/res/img/dark/ic-transaction-received-inactive.svg \
-  qt/pivx/res/img/img-welcome-step1.png \
-  qt/pivx/res/img/ic-check-connect.svg \
-  qt/pivx/res/img/ic-menu-hover.svg \
-  qt/pivx/res/img/ic-transaction-sent.svg \
-  qt/pivx/res/img/ic-transaction-sent-inactive.svg \
-  qt/pivx/res/img/dark/ic-transaction-sent.svg \
-  qt/pivx/res/img/dark/ic-transaction-sent-inactive.svg \
-  qt/pivx/res/img/img-welcome-step2.png \
-  qt/pivx/res/img/ic-check-dark.svg \
-  qt/pivx/res/img/ic-mint.svg \
-  qt/pivx/res/img/ic-transaction-staked.svg \
-  qt/pivx/res/img/ic-transaction-staked-inactive.svg \
-  qt/pivx/res/img/dark/ic-transaction-staked.svg \
-  qt/pivx/res/img/dark/ic-transaction-staked-inactive.svg \
-  qt/pivx/res/img/img-welcome-step3.png \
-  qt/pivx/res/img/ic-check-liliac-on.svg \
-  qt/pivx/res/img/ic-nav-address-active.svg \
-  qt/pivx/res/img/ic-unlock-staking.svg \
-  qt/pivx/res/img/img-welcome-step4.png \
-  qt/pivx/res/img/ic-check-locked-off.svg \
-  qt/pivx/res/img/ic-nav-address-hover.svg \
-  qt/pivx/res/img/ic-update-liliac.svg \
-  qt/pivx/res/img/ic-arrow-drop-down-purple.svg \
-  qt/pivx/res/img/ic-arrow-drop-up-purple.svg \
-  qt/pivx/res/img/ic-check-liliac-indeterminate.svg \
-  qt/pivx/res/img/ic-check-box-liliac-indeterminate.svg \
-  qt/pivx/res/img/ic-transaction-stake-delegated.svg \
-  qt/pivx/res/img/ic-transaction-stake-delegated-inactive.svg \
-  qt/pivx/res/img/ic-transaction-stake-hot.svg \
-  qt/pivx/res/img/ic-transaction-stake-hot-inactive.svg \
-  qt/pivx/res/img/dark/ic-transaction-stake-hot.svg \
-  qt/pivx/res/img/dark/ic-transaction-stake-hot-inactive.svg \
-  qt/pivx/res/img/dark/ic-transaction-stake-delegated.svg \
-  qt/pivx/res/img/dark/ic-transaction-stake-delegated-inactive.svg \
-  qt/pivx/res/img/ic-transaction-cs-contract.svg \
-  qt/pivx/res/img/ic-transaction-cs-contract-inactive.svg \
-  qt/pivx/res/img/ic-check-box-indeterminate.svg \
-  qt/pivx/res/img/ani-loading-dark.gif \
-  qt/pivx/res/img/ani-loading.gif
+  qt/tenup/res/img/bg-dashboard-banner.png \
+  qt/tenup/res/img/bg-multi-number-dark.svg \
+  qt/tenup/res/img/ic-check-locked.svg \
+  qt/tenup/res/img/ic-nav-address.svg \
+  qt/tenup/res/img/ic-update.svg \
+  qt/tenup/res/img/bg-multi-number.svg \
+  qt/tenup/res/img/ic-check-mint-off.svg \
+  qt/tenup/res/img/ic-nav-cold-staking.svg \
+  qt/tenup/res/img/ic-nav-cold-staking-active.svg \
+  qt/tenup/res/img/ic-nav-dashboard-active.svg \
+  qt/tenup/res/img/ic-wallet-status-locked.svg \
+  qt/tenup/res/img/bg-splash.svg \
+  qt/tenup/res/img/bg-splash.png \
+  qt/tenup/res/img/ic-check-mint.svg \
+  qt/tenup/res/img/ic-nav-dashboard-hover.svg \
+  qt/tenup/res/img/ic-wallet-status-staking.svg \
+  qt/tenup/res/img/ic-check-peers-off.svg \
+  qt/tenup/res/img/ic-nav-dashboard.svg \
+  qt/tenup/res/img/ic-wallet-status-unlocked.svg \
+  qt/tenup/res/img/ic-check-peers.svg \
+  qt/tenup/res/img/ic-nav-master-active.svg \
+  qt/tenup/res/img/ic-watch-password-white.svg \
+  qt/tenup/res/img/bg-welcome-container.jpg \
+  qt/tenup/res/img/bg-welcome-container.png \
+  qt/tenup/res/img/bg-welcome-container.svg \
+  qt/tenup/res/img/bg-welcome-container@2x.png \
+  qt/tenup/res/img/bg-welcome-container@3x.png \
+  qt/tenup/res/img/ic-check-staking-off.svg \
+  qt/tenup/res/img/ic-nav-master-hover.svg \
+  qt/tenup/res/img/ic-watch-password.svg \
+  qt/tenup/res/img/bg-welcome.jpg \
+  qt/tenup/res/img/bg-welcome.svg \
+  qt/tenup/res/img/bg-welcome@2x.jpg \
+  qt/tenup/res/img/bg-welcome@3x.jpg \
+  qt/tenup/res/img/bg-welcome.png \
+  qt/tenup/res/img/ic-check-staking.svg \
+  qt/tenup/res/img/ic-nav-master.svg \
+  qt/tenup/res/img/img-dashboard-banner.jpg \
+  qt/tenup/res/img/btn-radio-active.svg \
+  qt/tenup/res/img/ic-check-sync-off.svg \
+  qt/tenup/res/img/ic-nav-privacy-active.svg \
+  qt/tenup/res/img/img-empty-contacts.svg \
+  qt/tenup/res/img/btn-radio-off.svg \
+  qt/tenup/res/img/ic-check-sync.png \
+  qt/tenup/res/img/ic-nav-privacy-hover.svg \
+  qt/tenup/res/img/img-empty-dark-contacts.svg \
+  qt/tenup/res/img/ic-contact-arrow-down.svg \
+  qt/tenup/res/img/ic-contact-arrow-down-white.svg \
+  qt/tenup/res/img/ic-check-sync.svg \
+  qt/tenup/res/img/ic-check-faq.svg \
+  qt/tenup/res/img/ic-nav-privacy.svg \
+  qt/tenup/res/img/img-empty-dark-error.svg \
+  qt/tenup/res/img/ic-add-label.svg \
+  qt/tenup/res/img/ic-pending.svg \
+  qt/tenup/res/img/ic-check-theme-dark.svg \
+  qt/tenup/res/img/ic-nav-receive-active.svg \
+  qt/tenup/res/img/img-empty-dark-masternode.svg \
+  qt/tenup/res/img/ic-add-liliac.svg \
+  qt/tenup/res/img/ic-check-theme-light.svg \
+  qt/tenup/res/img/ic-nav-receive-hover.svg \
+  qt/tenup/res/img/img-empty-dark-multisend.svg \
+  qt/tenup/res/img/ic-add-purple.svg \
+  qt/tenup/res/img/ic-check-white.svg \
+  qt/tenup/res/img/ic-nav-receive.svg \
+  qt/tenup/res/img/img-empty-dark-peers.svg \
+  qt/tenup/res/img/ic-add.svg \
+  qt/tenup/res/img/ic-check.svg \
+  qt/tenup/res/img/ic-nav-send-active.svg \
+  qt/tenup/res/img/img-empty-dark-staking-off.svg \
+  qt/tenup/res/img/img-empty-dark-staking-on.svg \
+  qt/tenup/res/img/ic-address-book-grey.svg \
+  qt/tenup/res/img/ic-chevron-left.svg \
+  qt/tenup/res/img/ic-nav-send-hover.svg \
+  qt/tenup/res/img/img-empty-dark-transactions.svg \
+  qt/tenup/res/img/ic-address-book-white.svg \
+  qt/tenup/res/img/ic-chevron-right.svg \
+  qt/tenup/res/img/ic-nav-send.svg \
+  qt/tenup/res/img/img-empty-error.svg \
+  qt/tenup/res/img/ic-address-book.svg \
+  qt/tenup/res/img/ic-clear-liliac.svg \
+  qt/tenup/res/img/ic-nav-settings-active.svg \
+  qt/tenup/res/img/img-empty-masternode.svg \
+  qt/tenup/res/img/ic-address-send-white.svg \
+  qt/tenup/res/img/ic-clear-purple.svg \
+  qt/tenup/res/img/ic-nav-settings-hover.svg \
+  qt/tenup/res/img/img-empty-multisend.svg \
+  qt/tenup/res/img/ic-address-send.svg \
+  qt/tenup/res/img/ic-close-white.svg \
+  qt/tenup/res/img/ic-nav-settings.svg \
+  qt/tenup/res/img/img-empty-peers.svg \
+  qt/tenup/res/img/img-empty-privacy.svg \
+  qt/tenup/res/img/img-empty-privacy-dark.svg \
+  qt/tenup/res/img/ic-arrow-drop-down-white.svg \
+  qt/tenup/res/img/ic-close.svg \
+  qt/tenup/res/img/ic-radio-liliac-on.svg \
+  qt/tenup/res/img/img-empty-staking-off.svg \
+  qt/tenup/res/img/ic-arrow-drop-down.svg \
+  qt/tenup/res/img/ic-coin-tup.svg \
+  qt/tenup/res/img/ic-receive-off.svg \
+  qt/tenup/res/img/img-empty-staking-on.svg \
+  qt/tenup/res/img/ic-arrow-drop-up-white.svg \
+  qt/tenup/res/img/ic-coin-ztup.png \
+  qt/tenup/res/img/ic-receive-on.svg \
+  qt/tenup/res/img/img-empty-transactions.svg \
+  qt/tenup/res/img/ic-arrow-drop-up.svg \
+  qt/tenup/res/img/ic-coin-ztup.svg \
+  qt/tenup/res/img/ic-received.svg \
+  qt/tenup/res/img/img-logo-tenup.png \
+  qt/tenup/res/img/ic-arrow-drop-white-down.svg \
+  qt/tenup/res/img/ic-combo-box.svg \
+  qt/tenup/res/img/ic-send.svg \
+  qt/tenup/res/img/img-logo-tenup@2x.png \
+  qt/tenup/res/img/ic-arrow-purple-down.svg \
+  qt/tenup/res/img/ic-connect.svg \
+  qt/tenup/res/img/ic-submenu-lock.svg \
+  qt/tenup/res/img/img-logo-tenup@3x.png \
+  qt/tenup/res/img/img-logo-tenup.svg \
+  qt/tenup/res/img/ic-arrow-right-white.svg \
+  qt/tenup/res/img/ic-arrow-left-white.svg \
+  qt/tenup/res/img/ic-arrow-left.svg \
+  qt/tenup/res/img/ic-copy-liliac.svg \
+  qt/tenup/res/img/ic-submenu-staking.svg \
+  qt/tenup/res/img/img-nav-logo-tenup.png \
+  qt/tenup/res/img/ic-arrow-right.svg \
+  qt/tenup/res/img/ic-copy.svg \
+  qt/tenup/res/img/ic-copy-big.svg \
+  qt/tenup/res/img/ic-copy-big-white.svg \
+  qt/tenup/res/img/ic-submenu-unlock.svg \
+  qt/tenup/res/img/img-nav-logo.png \
+  qt/tenup/res/img/ic-arrow-white-left.svg \
+  qt/tenup/res/img/ic-exit.svg \
+  qt/tenup/res/img/ic-switch-liliac-on.svg \
+  qt/tenup/res/img/img-nav-logo.svg \
+  qt/tenup/res/img/ic-arrow-white-right.svg \
+  qt/tenup/res/img/ic-expand.svg \
+  qt/tenup/res/img/ic-switch-off.svg \
+  qt/tenup/res/img/img-qr-test-big.png \
+  qt/tenup/res/img/ic-check-active.svg \
+  qt/tenup/res/img/ic-folder.svg \
+  qt/tenup/res/img/ic-switch-on.svg \
+  qt/tenup/res/img/img-qr-test.png \
+  qt/tenup/res/img/ic-check-box.svg \
+  qt/tenup/res/img/ic-check-box-dark-active.svg \
+  qt/tenup/res/img/ic-check-box-indeterminate.svg \
+  qt/tenup/res/img/ic-check-box-liliac-indeterminate.svg \
+  qt/tenup/res/img/ic-label-liliac.svg \
+  qt/tenup/res/img/ic-transaction-warning.svg \
+  qt/tenup/res/img/ic-transaction-mint.svg \
+  qt/tenup/res/img/ic-transaction-mint-inactive.svg \
+  qt/tenup/res/img/ic-check-cold-staking.svg \
+  qt/tenup/res/img/ic-check-cold-staking-off.svg \
+  qt/tenup/res/img/ic-check-cold-staking-enabled.svg \
+  qt/tenup/res/img/dark/ic-transaction-cs-contract.svg \
+  qt/tenup/res/img/dark/ic-transaction-cs-contract-inactive.svg \
+  qt/tenup/res/img/img-qr.svg \
+  qt/tenup/res/img/ic-check-connect-off.svg \
+  qt/tenup/res/img/ic-label.svg \
+  qt/tenup/res/img/ic-transaction-received.svg \
+  qt/tenup/res/img/dark/ic-transaction-received.svg \
+  qt/tenup/res/img/dark/ic-transaction-warning.svg \
+  qt/tenup/res/img/dark/ic-transaction-mint.svg \
+  qt/tenup/res/img/dark/ic-transaction-mint-inactive.svg \
+  qt/tenup/res/img/ic-transaction-received-inactive.svg \
+  qt/tenup/res/img/dark/ic-transaction-received-inactive.svg \
+  qt/tenup/res/img/img-welcome-step1.png \
+  qt/tenup/res/img/ic-check-connect.svg \
+  qt/tenup/res/img/ic-menu-hover.svg \
+  qt/tenup/res/img/ic-transaction-sent.svg \
+  qt/tenup/res/img/ic-transaction-sent-inactive.svg \
+  qt/tenup/res/img/dark/ic-transaction-sent.svg \
+  qt/tenup/res/img/dark/ic-transaction-sent-inactive.svg \
+  qt/tenup/res/img/img-welcome-step2.png \
+  qt/tenup/res/img/ic-check-dark.svg \
+  qt/tenup/res/img/ic-mint.svg \
+  qt/tenup/res/img/ic-transaction-staked.svg \
+  qt/tenup/res/img/ic-transaction-staked-inactive.svg \
+  qt/tenup/res/img/dark/ic-transaction-staked.svg \
+  qt/tenup/res/img/dark/ic-transaction-staked-inactive.svg \
+  qt/tenup/res/img/img-welcome-step3.png \
+  qt/tenup/res/img/ic-check-liliac-on.svg \
+  qt/tenup/res/img/ic-nav-address-active.svg \
+  qt/tenup/res/img/ic-unlock-staking.svg \
+  qt/tenup/res/img/img-welcome-step4.png \
+  qt/tenup/res/img/ic-check-locked-off.svg \
+  qt/tenup/res/img/ic-nav-address-hover.svg \
+  qt/tenup/res/img/ic-update-liliac.svg \
+  qt/tenup/res/img/ic-arrow-drop-down-purple.svg \
+  qt/tenup/res/img/ic-arrow-drop-up-purple.svg \
+  qt/tenup/res/img/ic-check-liliac-indeterminate.svg \
+  qt/tenup/res/img/ic-check-box-liliac-indeterminate.svg \
+  qt/tenup/res/img/ic-transaction-stake-delegated.svg \
+  qt/tenup/res/img/ic-transaction-stake-delegated-inactive.svg \
+  qt/tenup/res/img/ic-transaction-stake-hot.svg \
+  qt/tenup/res/img/ic-transaction-stake-hot-inactive.svg \
+  qt/tenup/res/img/dark/ic-transaction-stake-hot.svg \
+  qt/tenup/res/img/dark/ic-transaction-stake-hot-inactive.svg \
+  qt/tenup/res/img/dark/ic-transaction-stake-delegated.svg \
+  qt/tenup/res/img/dark/ic-transaction-stake-delegated-inactive.svg \
+  qt/tenup/res/img/ic-transaction-cs-contract.svg \
+  qt/tenup/res/img/ic-transaction-cs-contract-inactive.svg \
+  qt/tenup/res/img/ic-check-box-indeterminate.svg \
+  qt/tenup/res/img/ani-loading-dark.gif \
+  qt/tenup/res/img/ani-loading.gif
 
 
 
@@ -617,7 +617,7 @@ BITCOIN_QT_BASE_CPP = \
   qt/bantablemodel.cpp \
   qt/bitcoinaddressvalidator.cpp \
   qt/bitcoinamountfield.cpp \
-  qt/pivx/pivxgui.cpp \
+  qt/tenup/tenupgui.cpp \
   qt/bitcoinunits.cpp \
   qt/blockexplorer.cpp \
   qt/clientmodel.cpp \
@@ -659,68 +659,68 @@ BITCOIN_QT_WALLET_CPP = \
   qt/transactiontablemodel.cpp \
   qt/walletmodel.cpp \
   qt/walletmodeltransaction.cpp \
-  qt/pivx/loadingdialog.cpp \
-  qt/zpivcontroldialog.cpp \
-  qt/pivx/pwidget.cpp \
-  qt/pivx/guitransactionsutils.cpp \
-  qt/pivx/snackbar.cpp \
-  qt/pivx/navmenuwidget.cpp \
-  qt/pivx/lockunlock.cpp \
-  qt/pivx/receivedialog.cpp \
-  qt/pivx/furabstractlistitemdelegate.cpp \
-  qt/pivx/txviewholder.cpp \
-  qt/pivx/qtutils.cpp \
-  qt/pivx/expandablebutton.cpp \
-  qt/pivx/walletpassworddialog.cpp \
-  qt/pivx/topbar.cpp \
-  qt/pivx/txrow.cpp \
-  qt/pivx/addressholder.cpp \
-  qt/pivx/addressfilterproxymodel.cpp \
-  qt/pivx/dashboardwidget.cpp \
-  qt/pivx/coincontrolpivwidget.cpp \
-  qt/pivx/addresslabelrow.cpp \
-  qt/pivx/contactdropdownrow.cpp \
-  qt/pivx/contactsdropdown.cpp \
-  qt/pivx/optionbutton.cpp \
-  qt/pivx/mninfodialog.cpp \
-  qt/pivx/coldstakingmodel.cpp \
-  qt/pivx/mnmodel.cpp \
-  qt/pivx/masternodewizarddialog.cpp \
-  qt/pivx/mnrow.cpp \
-  qt/pivx/masternodeswidget.cpp \
-  qt/pivx/myaddressrow.cpp \
-  qt/pivx/csrow.cpp \
-  qt/pivx/sendchangeaddressdialog.cpp \
-  qt/pivx/sendconfirmdialog.cpp \
-  qt/pivx/sendcustomfeedialog.cpp \
-  qt/pivx/sendchangeaddressdialog.cpp \
-  qt/pivx/sendmultirow.cpp \
-  qt/pivx/send.cpp \
-  qt/pivx/addnewaddressdialog.cpp \
-  qt/pivx/addnewcontactdialog.cpp \
-  qt/pivx/requestdialog.cpp \
-  qt/pivx/receivewidget.cpp \
-  qt/pivx/tooltipmenu.cpp \
-  qt/pivx/addresseswidget.cpp \
-  qt/pivx/defaultdialog.cpp \
-  qt/pivx/denomgenerationdialog.cpp \
-  qt/pivx/privacywidget.cpp \
-  qt/pivx/coldstakingwidget.cpp \
-  qt/pivx/settings/settingsbackupwallet.cpp \
-  qt/pivx/settings/settingsbittoolwidget.cpp \
-  qt/pivx/settings/settingsconsolewidget.cpp \
-  qt/pivx/settings/settingsdisplayoptionswidget.cpp \
-  qt/pivx/settings/settingsfaqwidget.cpp \
-  qt/pivx/settings/settingsinformationwidget.cpp \
-  qt/pivx/settings/settingsmainoptionswidget.cpp \
-  qt/pivx/settings/settingsmultisenddialog.cpp \
-  qt/pivx/settings/settingsmultisendwidget.cpp \
-  qt/pivx/settings/settingssignmessagewidgets.cpp \
-  qt/pivx/settings/settingswalletoptionswidget.cpp \
-  qt/pivx/settings/settingswalletrepairwidget.cpp \
-  qt/pivx/settings/settingswidget.cpp \
-  qt/pivx/welcomecontentwidget.cpp \
-  qt/pivx/splash.cpp
+  qt/tenup/loadingdialog.cpp \
+  qt/ztupcontroldialog.cpp \
+  qt/tenup/pwidget.cpp \
+  qt/tenup/guitransactionsutils.cpp \
+  qt/tenup/snackbar.cpp \
+  qt/tenup/navmenuwidget.cpp \
+  qt/tenup/lockunlock.cpp \
+  qt/tenup/receivedialog.cpp \
+  qt/tenup/furabstractlistitemdelegate.cpp \
+  qt/tenup/txviewholder.cpp \
+  qt/tenup/qtutils.cpp \
+  qt/tenup/expandablebutton.cpp \
+  qt/tenup/walletpassworddialog.cpp \
+  qt/tenup/topbar.cpp \
+  qt/tenup/txrow.cpp \
+  qt/tenup/addressholder.cpp \
+  qt/tenup/addressfilterproxymodel.cpp \
+  qt/tenup/dashboardwidget.cpp \
+  qt/tenup/coincontroltupwidget.cpp \
+  qt/tenup/addresslabelrow.cpp \
+  qt/tenup/contactdropdownrow.cpp \
+  qt/tenup/contactsdropdown.cpp \
+  qt/tenup/optionbutton.cpp \
+  qt/tenup/mninfodialog.cpp \
+  qt/tenup/coldstakingmodel.cpp \
+  qt/tenup/mnmodel.cpp \
+  qt/tenup/masternodewizarddialog.cpp \
+  qt/tenup/mnrow.cpp \
+  qt/tenup/masternodeswidget.cpp \
+  qt/tenup/myaddressrow.cpp \
+  qt/tenup/csrow.cpp \
+  qt/tenup/sendchangeaddressdialog.cpp \
+  qt/tenup/sendconfirmdialog.cpp \
+  qt/tenup/sendcustomfeedialog.cpp \
+  qt/tenup/sendchangeaddressdialog.cpp \
+  qt/tenup/sendmultirow.cpp \
+  qt/tenup/send.cpp \
+  qt/tenup/addnewaddressdialog.cpp \
+  qt/tenup/addnewcontactdialog.cpp \
+  qt/tenup/requestdialog.cpp \
+  qt/tenup/receivewidget.cpp \
+  qt/tenup/tooltipmenu.cpp \
+  qt/tenup/addresseswidget.cpp \
+  qt/tenup/defaultdialog.cpp \
+  qt/tenup/denomgenerationdialog.cpp \
+  qt/tenup/privacywidget.cpp \
+  qt/tenup/coldstakingwidget.cpp \
+  qt/tenup/settings/settingsbackupwallet.cpp \
+  qt/tenup/settings/settingsbittoolwidget.cpp \
+  qt/tenup/settings/settingsconsolewidget.cpp \
+  qt/tenup/settings/settingsdisplayoptionswidget.cpp \
+  qt/tenup/settings/settingsfaqwidget.cpp \
+  qt/tenup/settings/settingsinformationwidget.cpp \
+  qt/tenup/settings/settingsmainoptionswidget.cpp \
+  qt/tenup/settings/settingsmultisenddialog.cpp \
+  qt/tenup/settings/settingsmultisendwidget.cpp \
+  qt/tenup/settings/settingssignmessagewidgets.cpp \
+  qt/tenup/settings/settingswalletoptionswidget.cpp \
+  qt/tenup/settings/settingswalletrepairwidget.cpp \
+  qt/tenup/settings/settingswidget.cpp \
+  qt/tenup/welcomecontentwidget.cpp \
+  qt/tenup/splash.cpp
 
 
 BITCOIN_QT_CPP = $(BITCOIN_QT_BASE_CPP)
@@ -736,7 +736,7 @@ RES_IMAGES = \
   qt/res/images/splash.png \
   qt/res/images/splash_testnet.png \
   qt/res/images/splash_regtest.png \
-  qt/res/images/pivx_logo_horizontal.png \
+  qt/res/images/tenup_logo_horizontal.png \
   qt/res/images/downArrow_dark.png \
   qt/res/images/downArrow_small_dark.png \
   qt/res/images/downArrow_small.png \
@@ -748,12 +748,12 @@ RES_IMAGES = \
 
 RES_CSS = \
   qt/res/css/default.css \
-  qt/pivx/res/css/style_dark.css \
-  qt/pivx/res/css/style_light.css
+  qt/tenup/res/css/style_dark.css \
+  qt/tenup/res/css/style_light.css
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
-BITCOIN_RC = qt/res/pivx-qt-res.rc
+BITCOIN_RC = qt/res/tenup-qt-res.rc
 
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms
@@ -775,71 +775,71 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_pivx_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_tenup_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# pivx-qt binary #
-qt_pivx_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# tenup-qt binary #
+qt_tenup_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS) $(SVG_CFLAGS) $(CHARTS_CFLAGS)
-qt_pivx_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_tenup_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_pivx_qt_SOURCES = qt/pivx.cpp
+qt_tenup_qt_SOURCES = qt/tenup.cpp
 if TARGET_DARWIN
-  qt_pivx_qt_SOURCES += $(BITCOIN_MM)
+  qt_tenup_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_pivx_qt_SOURCES += $(BITCOIN_RC)
+  qt_tenup_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_pivx_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_tenup_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_pivx_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
+qt_tenup_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_pivx_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+qt_tenup_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_pivx_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+qt_tenup_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(SVG_LIBS) $(CHARTS_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_pivx_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_pivx_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
+qt_tenup_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_tenup_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 SECONDARY: $(QT_QM)
 
-$(srcdir)/qt/pivxstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) $(libbitcoin_util_a_SOURCES)
+$(srcdir)/qt/tenupstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) $(libbitcoin_util_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) PACKAGE_NAME="$(PACKAGE_NAME)" $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: $(srcdir)/qt/pivxstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_BASE_CPP) qt/pivx.cpp $(BITCOIN_QT_WINDOWS_CPP) $(BITCOIN_QT_WALLET_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: $(srcdir)/qt/tenupstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_BASE_CPP) qt/tenup.cpp $(BITCOIN_QT_WINDOWS_CPP) $(BITCOIN_QT_WALLET_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts $(srcdir)/qt/locale/pivx_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts $(srcdir)/qt/locale/tenup_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@cp -f $< $(@D)/temp_$(<F)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name pivx_locale $(@D)/temp_$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name tenup_locale $(@D)/temp_$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 	@rm $(@D)/temp_$(<F)
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name pivx $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name tenup $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_pivx_locale.qrc
+CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_tenup_locale.qrc
 
 CLEANFILES += $(CLEAN_QT)
 
-pivx_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_pivx_qt_OBJECTS) qt/pivx-qt$(EXEEXT) $(LIBBITCOINQT)
+tenup_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_tenup_qt_OBJECTS) qt/tenup-qt$(EXEEXT) $(LIBBITCOINQT)
 
-pivx_qt : qt/pivx-qt$(EXEEXT)
+tenup_qt : qt/tenup-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

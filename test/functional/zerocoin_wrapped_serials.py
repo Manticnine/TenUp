@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2019 The PIVX developers
+# Copyright (c) 2019 The TENUP developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +10,7 @@ Covers the 'Wrapped Serials Attack' scenario for Zerocoin Spends
 import random
 from time import sleep
 
-from test_framework.test_framework import PivxTestFramework
+from test_framework.test_framework import TenUpTestFramework
 from test_framework.util import (
     sync_blocks,
     assert_equal,
@@ -19,7 +19,7 @@ from test_framework.util import (
     DecimalAmt
 )
 
-class zPIVwrappedSerialsTest(PivxTestFramework):
+class zTUPwrappedSerialsTest(TenUpTestFramework):
 
     def set_test_params(self):
         self.num_nodes = 3
@@ -60,13 +60,13 @@ class zPIVwrappedSerialsTest(PivxTestFramework):
         def get_zerocoin_data(coin):
             return coin["s"], coin["r"], coin["k"], coin["id"], coin["d"], coin["t"]
 
-        def check_balances(denom, zpiv_bal, piv_bal):
-            zpiv_bal -= denom
-            assert_equal(self.nodes[2].getzerocoinbalance()['Total'], zpiv_bal)
-            piv_bal += denom
+        def check_balances(denom, ztup_bal, tup_bal):
+            ztup_bal -= denom
+            assert_equal(self.nodes[2].getzerocoinbalance()['Total'], ztup_bal)
+            tup_bal += denom
             wi = self.nodes[2].getwalletinfo()
-            assert_equal(wi['balance'] + wi['immature_balance'], piv_bal)
-            return zpiv_bal, piv_bal
+            assert_equal(wi['balance'] + wi['immature_balance'], tup_bal)
+            return ztup_bal, tup_bal
 
         def stake_4_blocks(block_time):
             for peer in range(2):
@@ -85,9 +85,9 @@ class zPIVwrappedSerialsTest(PivxTestFramework):
         # Start with cache balances
         wi = self.nodes[2].getwalletinfo()
         balance = wi['balance'] + wi['immature_balance']
-        zpiv_balance = self.nodes[2].getzerocoinbalance()['Total']
+        ztup_balance = self.nodes[2].getzerocoinbalance()['Total']
         assert_equal(balance, DecimalAmt(13833.92))
-        assert_equal(zpiv_balance, 6666)
+        assert_equal(ztup_balance, 6666)
 
         # Export zerocoin data
         listmints = self.nodes[2].listmintedzerocoins(True, True)
@@ -103,7 +103,7 @@ class zPIVwrappedSerialsTest(PivxTestFramework):
         # stake 4 blocks - check it gets included on chain and check balances
         block_time = stake_4_blocks(block_time)
         self.check_tx_in_chain(0, txid)
-        zpiv_balance, balance = check_balances(denom_0, zpiv_balance, balance)
+        ztup_balance, balance = check_balances(denom_0, ztup_balance, balance)
         self.log.info("Coin spent.")
 
         # 2) create 5  new coins
@@ -127,4 +127,4 @@ class zPIVwrappedSerialsTest(PivxTestFramework):
 
 
 if __name__ == '__main__':
-    zPIVwrappedSerialsTest().main()
+    zTUPwrappedSerialsTest().main()

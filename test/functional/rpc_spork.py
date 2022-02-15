@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-# Copyright (c) 2019 The PIVX developers
+# Copyright (c) 2019 The TENUP developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 # -*- coding: utf-8 -*-
 
 from time import sleep
 
-from test_framework.test_framework import PivxTestFramework
+from test_framework.test_framework import TenUpTestFramework
 from test_framework.util import set_node_times, assert_equal
 
 
-class PIVX_RPCSporkTest(PivxTestFramework):
+class TENUP_RPCSporkTest(TenUpTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True
@@ -70,5 +70,5 @@ class PIVX_RPCSporkTest(PivxTestFramework):
 
 
 if __name__ == '__main__':
-    PIVX_RPCSporkTest().main()
+    TENUP_RPCSporkTest().main()
 

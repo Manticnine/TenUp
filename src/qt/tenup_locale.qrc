@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/tenup_bg.qm</file>
+        <file alias="ca">locale/tenup_ca.qm</file>
+        <file alias="cs">locale/tenup_cs.qm</file>
+        <file alias="da">locale/tenup_da.qm</file>
+        <file alias="de">locale/tenup_de.qm</file>
+        <file alias="en">locale/tenup_en.qm</file>
+        <file alias="en_GB">locale/tenup_en_GB.qm</file>
+        <file alias="en_US">locale/tenup_en_US.qm</file>
+        <file alias="eo">locale/tenup_eo.qm</file>
+        <file alias="es">locale/tenup_es.qm</file>
+        <file alias="es_ES">locale/tenup_es_ES.qm</file>
+        <file alias="fi">locale/tenup_fi.qm</file>
+        <file alias="fr_FR">locale/tenup_fr_FR.qm</file>
+        <file alias="hi_IN">locale/tenup_hi_IN.qm</file>
+        <file alias="hr">locale/tenup_hr.qm</file>
+        <file alias="hr_HR">locale/tenup_hr_HR.qm</file>
+        <file alias="it">locale/tenup_it.qm</file>
+        <file alias="ja">locale/tenup_ja.qm</file>
+        <file alias="ko_KR">locale/tenup_ko_KR.qm</file>
+        <file alias="lt_LT">locale/tenup_lt_LT.qm</file>
+        <file alias="nl">locale/tenup_nl.qm</file>
+        <file alias="pl">locale/tenup_pl.qm</file>
+        <file alias="pt">locale/tenup_pt.qm</file>
+        <file alias="pt_BR">locale/tenup_pt_BR.qm</file>
+        <file alias="ro_RO">locale/tenup_ro_RO.qm</file>
+        <file alias="ru">locale/tenup_ru.qm</file>
+        <file alias="sk">locale/tenup_sk.qm</file>
+        <file alias="sv">locale/tenup_sv.qm</file>
+        <file alias="tr">locale/tenup_tr.qm</file>
+        <file alias="uk">locale/tenup_uk.qm</file>
+        <file alias="vi">locale/tenup_vi.qm</file>
+        <file alias="zh_CN">locale/tenup_zh_CN.qm</file>
+        <file alias="zh_TW">locale/tenup_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,9 +1,9 @@
-// Copyright (c) 2017-2019 The PIVX developers
+// Copyright (c) 2017-2019 The TENUP developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PIVX_CSPORKDB_H
-#define PIVX_CSPORKDB_H
+#ifndef TENUP_CSPORKDB_H
+#define TENUP_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //PIVX_CSPORKDB_H
+#endif //TENUP_CSPORKDB_H
