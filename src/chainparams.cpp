@@ -175,7 +175,7 @@ public:
         nTenUpBadBlockTime = 1528584028; // Skip nBit validation of Block 259201 per PR #915
         nTenUpBadBlocknBits = 0x1e0099ee; // Skip nBit validation of Block 259201 per PR #915
         nModifierUpdateBlock = 999999999;
-        nZerocoinStartHeight = 200;
+        nZerocoinStartHeight = 201;
         nZerocoinStartTime = 1522920605; // October 17, 2017 4:30:00 AM
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
@@ -254,12 +254,12 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
-        fSkipProofOfWorkCheck = false;
+        fSkipProofOfWorkCheck = true;
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
 

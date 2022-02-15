@@ -3171,12 +3171,12 @@ Please check the address and try again.</translation>
         <translation>Unable to locate enough Obfuscation denominated funds for this transaction.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 TUP.</source>
-        <translation>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 TUP.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 25000 TUP.</source>
+        <translation>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 25000 TUP.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 TUP.</source>
-        <translation>Unable to locate enough funds for this transaction that are not equal 10000 TUP.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 25000 TUP.</source>
+        <translation>Unable to locate enough funds for this transaction that are not equal 25000 TUP.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>

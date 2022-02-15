@@ -7942,12 +7942,12 @@ TENUP Core Wallet</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 TUP.</source>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 25000 TUP.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 TUP.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 25000 TUP.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

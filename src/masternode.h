@@ -103,7 +103,7 @@ public:
 };
 
 //
-// The Masternode Class. For managing the Obfuscation process. It contains the input of the 10000 TUP, signature to prove
+// The Masternode Class. For managing the Obfuscation process. It contains the input of the 25000 TUP, signature to prove
 // it's the one who own that ip address and code for calculating the payment election.
 //
 class CMasternode : public CSignedMessage
@@ -292,7 +292,7 @@ public:
     int64_t GetLastPaid();
     bool IsValidNetAddr();
 
-    /// Is the input associated with collateral public key? (and there is 10000 TUP - checking if valid masternode)
+    /// Is the input associated with collateral public key? (and there is 25000 TUP - checking if valid masternode)
     bool IsInputAssociatedWithPubkey() const;
 };
 

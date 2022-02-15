@@ -6069,12 +6069,12 @@ Portefeuille TENUP Core</translation>
         <translation>Incapable de localiser suffisamment de fonds non-dénommés pour l'Obfuscation de cette transaction.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 TUP.</source>
-        <translation>Incapable de localiser suffisamment de fonds non-dénommés pour l'Obfuscation de cette transaction qui ne sont pas égaux à 10000 TUP.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 25000 TUP.</source>
+        <translation>Incapable de localiser suffisamment de fonds non-dénommés pour l'Obfuscation de cette transaction qui ne sont pas égaux à 25000 TUP.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 TUP.</source>
-        <translation>Impossible de grouper assez de fonds pour cette transaction qui n'est pas égale à 10000 TUP.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 25000 TUP.</source>
+        <translation>Impossible de grouper assez de fonds pour cette transaction qui n'est pas égale à 25000 TUP.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>

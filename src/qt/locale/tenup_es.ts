@@ -6017,12 +6017,12 @@ TENUP Core Wallet</translation>
         <translation>Imposible localizar suficientes fondos denominados de Ofuscación para esta transacción.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 TUP.</source>
-        <translation>Imposible localizar suficientes fondos no-denominados de Ofuscación para esta transacción que no es igual a 10000 TUP.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 25000 TUP.</source>
+        <translation>Imposible localizar suficientes fondos no-denominados de Ofuscación para esta transacción que no es igual a 25000 TUP.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 TUP.</source>
-        <translation>Imposible localizar fondos suficientes para esta transacción que no es igual a 10000 TUP.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 25000 TUP.</source>
+        <translation>Imposible localizar fondos suficientes para esta transacción que no es igual a 25000 TUP.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
