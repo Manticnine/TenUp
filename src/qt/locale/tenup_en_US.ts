@@ -1568,8 +1568,8 @@ Please check the address and try again.</translation>
         <translation>This is the slowest and most secure option. Using maximum anonymity will cost</translation>
     </message>
     <message>
-        <source>0.1 TUP per  10000 TUP you anonymize.</source>
-        <translation>0.1 TUP per  10000 TUP you anonymize.</translation>
+        <source>0.1 TUP per 25000 TUP you anonymize.</source>
+        <translation>0.1 TUP per 25000 TUP you anonymize.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>

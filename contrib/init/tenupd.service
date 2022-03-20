@@ -1,26 +1,44 @@
+# It is not recommended to modify this file in-place, because it will
+# be overwritten during package upgrades. If you want to add further
+# options or overwrite existing ones then use
+# $ systemctl edit bitcoind.service
+# See "man systemd.service" for details.
+
+# Note that almost all daemon options could be specified in
+# /etc/tenup/tenup.conf
+
 [Unit]
-Description=TenUp's distributed currency daemon
+Description=TenUp daemon
 After=network.target
 
 [Service]
+ExecStart=/usr/bin/tenupd -daemon -conf=/etc/tenup/tenup.conf -pid=/run/tenupd/tenupd.pid
+# Creates /run/tenupd owned by tenup
+RuntimeDirectory=tenupd
 User=tenup
-Group=tenup
-
 Type=forking
-PIDFile=/var/lib/tenupd/tenupd.pid
+PIDFile=/run/tenupd/tenupd.pid
+Restart=on-failure
 
-ExecStart=/usr/bin/tenupd -daemon -pid=/var/lib/tenupd/tenupd.pid \
-          -conf=/etc/tenup/tenup.conf -datadir=/var/lib/tenupd
+# Hardening measures
+####################
 
-ExecStop=-/usr/bin/tenup-cli -conf=/etc/tenup/tenup.conf \
-         -datadir=/var/lib/tenupd stop
-
-Restart=always
+# Provide a private /tmp and /var/tmp.
 PrivateTmp=true
-TimeoutStopSec=60s
-TimeoutStartSec=2s
-StartLimitInterval=120s
-StartLimitBurst=5
+
+# Mount /usr, /boot/ and /etc read-only for the process.
+ProtectSystem=full
+
+# Disallow the process and all of its children to gain
+# new privileges through execve().
+NoNewPrivileges=true
+
+# Use a new /dev namespace only populated with API pseudo devices
+# such as /dev/null, /dev/zero and /dev/random.
+PrivateDevices=true
+
+# Deny the creation of writable and executable memory mappings.
+MemoryDenyWriteExecute=true
 
 [Install]
 WantedBy=multi-user.target

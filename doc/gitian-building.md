@@ -281,7 +281,7 @@ Clone the git repositories for tenup and gitian and then checkout the tenup vers
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/tenup-coin/tenup.git
+git clone https://github.com/tenup-crypto/tenup.git
 cd tenup
 git checkout v${VERSION}
 cd ..
@@ -379,9 +379,9 @@ For example:
 ```bash
 URL=https://github.com/crowning-/tenup.git
 COMMIT=b616fb8ef0d49a919b72b0388b091aaec5849b96
-./bin/gbuild --commit TenUp=${COMMIT} --url tenup=${URL} ../TenUp/contrib/gitian-descriptors/gitian-linux.yml
-./bin/gbuild --commit TenUp=${COMMIT} --url tenup=${URL} ../TenUp/contrib/gitian-descriptors/gitian-win.yml
-./bin/gbuild --commit TenUp=${COMMIT} --url tenup=${URL} ../TenUp/contrib/gitian-descriptors/gitian-osx.yml
+./bin/gbuild --commit tenup=${COMMIT} --url tenup=${URL} ../tenup/contrib/gitian-descriptors/gitian-linux.yml
+./bin/gbuild --commit tenup=${COMMIT} --url tenup=${URL} ../tenup/contrib/gitian-descriptors/gitian-win.yml
+./bin/gbuild --commit tenup=${COMMIT} --url tenup=${URL} ../tenup/contrib/gitian-descriptors/gitian-osx.yml
 ```
 
 Signing externally

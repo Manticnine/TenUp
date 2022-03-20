@@ -1,0 +1,8 @@
+/usr/bin/tenup-cli		--	gen_context(system_u:object_r:tenup_exec_t,s0)
+/usr/sbin/tenupd		--	gen_context(system_u:object_r:tenup_exec_t,s0)
+/usr/lib(64)?/tenup/tenupd		--	gen_context(system_u:object_r:tenup_exec_t,s0)
+
+/etc/tenup(/.*)?		gen_context(system_u:object_r:tenup_conf_t,s0)
+/var/lib/tenup(/.*)?		gen_context(system_u:object_r:tenup_var_lib_t,s0)
+
+(/var)?/run/tenupd(/.*)?   gen_context(system_u:object_r:tenup_var_run_t,s0)

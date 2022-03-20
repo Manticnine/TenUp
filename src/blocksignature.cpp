@@ -1,10 +1,10 @@
-// Copyright (c) 2017-2018 The PIVX developers
-// Copyright (c) 2017-2018 The TenUp developers
+// Copyright (c) 2017-2019 The TenUp developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "blocksignature.h"
 #include "main.h"
+#include "ztupchain.h"
 
 bool SignBlockWithKey(CBlock& block, const CKey& key)
 {
@@ -67,7 +67,7 @@ bool CheckBlockSignature(const CBlock& block)
      *  UTXO: The public key that signs must match the public key associated with the first utxo of the coinstake tx.
      */
     CPubKey pubkey;
-    bool fzTUPStake = block.vtx[1].IsZerocoinSpend();
+    bool fzTUPStake = block.vtx[1].vin[0].IsZerocoinSpend();
     if (fzTUPStake) {
         libzerocoin::CoinSpend spend = TxInToZerocoinSpend(block.vtx[1].vin[0]);
         pubkey = spend.getPubKey();
@@ -84,7 +84,7 @@ bool CheckBlockSignature(const CBlock& block)
     }
 
     if (!pubkey.IsValid())
-        return error("%s: invalid pubkey %s", __func__, pubkey.GetHex());
+        return error("%s: invalid pubkey %s", __func__, HexStr(pubkey));
 
     return pubkey.Verify(block.GetHash(), block.vchBlockSig);
 }

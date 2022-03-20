@@ -1,2 +1,2 @@
-debian/manpages/tenupd.1
-debian/manpages/tenup.conf.5
+doc/man/tenupd.1
+doc/man/tenup-cli.1
