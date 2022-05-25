@@ -126,7 +126,7 @@ public:
         pchMessageStart[1] = 0xb4;
         pchMessageStart[2] = 0xfc;
         pchMessageStart[3] = 0xd9;
-        vAlertPubKey = ParseHex("0000098d3ba6ba6e7423fa5cbd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1eaa335fc8dc4f012cb8241cc0bdafd6ca70c5f5448916e4e6f511bcd746ed57dc50");
+        vAlertPubKey = ParseHex("0468bcd33b7ec5b95bc18848f2bb70d6185fe608efb359f35a13859dcdb8dba05d6a2cb08dcf81f2d591534415db2d85850fe811edd57dd9770d84e70e08509d3");
         nDefaultPort = 51482;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // TenUp starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -226,8 +226,8 @@ public:
 
         nPoolMaxTransactions = 3;
         nBudgetCycleBlocks = 43200; //!< Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
-        strSporkKey = "04B433E6598390C992F4F022F20D3B4CBBE691652EE7C48243B81701CBDB7CC7D7BF0EE09E154E6FCBF2043D65AF4E9E97B89B5DBAF830D83B9B7F469A6C45A717";
-        strSporkKeyOld = "04B433E6598390C992F4F022F20D3B4CBBE691652EE7C48243B81701CBDB7CC7D7BF0EE09E154E6FCBF2043D65AF4E9E97B89B5DBAF830D83B9B7F469A6C45A717";
+        strSporkKey = "04a8eea0982c4eaf10ebbf5ffffe33107b009388b74f1b204b334aebafde798e0475640d71f3b51758412c1e6990d789dbcfa51f20f4f040428951b2fdcc9606ef";
+        strSporkKeyOld = "04a914c224d1198d87d4f7a0dcd421f7cd4ff75995316a7b4817cac1ed7d0bd272672c96e44b98358c057e4f23593774c376539b499117736ab1e589e91b55c4e0";
         strObfuscationPoolDummyAddress = "D87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
         nStartMasternodePayments = 1528585200; //Wed, 25 Jun 2014 20:36:16 GMT
 
@@ -269,36 +269,36 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0xb1;
-        pchMessageStart[1] = 0xdf;
-        pchMessageStart[2] = 0x5c;
-        pchMessageStart[3] = 0xae;
-        vAlertPubKey = ParseHex("000010e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9");
+        pchMessageStart[0] = 0x50;
+        pchMessageStart[1] = 0x79;
+        pchMessageStart[2] = 0x55;
+        pchMessageStart[3] = 0xcd;
+        vAlertPubKey = ParseHex("049c741395aaa594bfa31002ce3ce0f596b5431aa0f764d3325e379d13ab920ecffaed3911e616f4ec462cb072451476eb910179ab841ca72f8dc42084fdefb37e");
         nDefaultPort = 51484;
         nEnforceBlockUpgradeMajority = 51; // 75%
         nRejectBlockOutdatedMajority = 75; // 95%
         nToCheckBlockUpgradeMajority = 100; // 4 days
         nMinerThreads = 0;
         nTargetSpacing = 1 * 60;  // TenUp: 1 minute
-        nLastPOWBlock = 200;
+        nLastPOWBlock = 100;
         nTenupBadBlockTime = 1489001494; // Skip nBit validation of Block 259201 per PR #915
         nTenupBadBlocknBits = 0x1e0a20bd; // Skip nBit validation of Block 201 per PR #915
-        nMaturity = 15;
+        nMaturity = 10;
         nStakeMinDepth = 100;
         nMasternodeCountDrift = 4;
-        nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
+        nModifierUpdateBlock = 999999999; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 43199500 * COIN;
-        nZerocoinStartHeight = 201;
-        nZerocoinStartTime = 1650707143;
+        nZerocoinStartHeight = 101;
+        nZerocoinStartTime = 1653374962; //Testnet
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = 9908000; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = 9891737; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = ~1; //Last valid accumulator checkpoint
         nBlockEnforceInvalidUTXO = 1; //Start enforcing the invalid UTXO's
         nInvalidAmountFiltered = 0; //Amount of invalid coins filtered through exchanges, that should be considered valid
-        nBlockZerocoinV2 = 444020; //!> The block that zerocoin v2 becomes active
-        nEnforceNewSporkKey = 1650676800; //!> Sporks signed after Monday, August 26, 2019 11:00:00 PM GMT must use the new spork key
-        nRejectOldSporkKey = 1650686800; //!> Reject old spork key after Thursday, September 26, 2019 11:00:00 PM GMT
+        nBlockZerocoinV2 = 999999999; //!> The block that zerocoin v2 becomes active
+        nEnforceNewSporkKey = 1521604800; //!> Sporks signed after Monday, August 26, 2019 11:00:00 PM GMT must use the new spork key
+        nRejectOldSporkKey = 1522454400; //!> Reject old spork key after Thursday, September 26, 2019 11:00:00 PM GMT
         nBlockStakeModifierlV2 = 99999999;
         // Public coin spend enforcement
         nPublicZCSpends = 999999999;
@@ -330,7 +330,7 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fAllowMinDifficultyBlocks = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
@@ -339,8 +339,8 @@ public:
 
         nPoolMaxTransactions = 2;
         nBudgetCycleBlocks = 144; //!< Ten cycles per day on testnet
-        strSporkKey = "04A8B319388C0F8588D238B9941DC26B26D3F9465266B368A051C5C100F79306A557780101FE2192FE170D7E6DEFDCBEE4C8D533396389C0DAFFDBC842B002243C";
-        strSporkKeyOld = "04348C2F50F90267E64FACC65BFDC9D0EB147D090872FB97ABAE92E9A36E6CA60983E28E741F8E7277B11A7479B626AC115BA31463AC48178A5075C5A9319D4A38";
+        strSporkKey = "049c741395aaa594bfa31002ce3ce0f596b5431aa0f764d3325e379d13ab920ecffaed3911e616f4ec462cb072451476eb910179ab841ca72f8dc42084fdefb37e";
+        strSporkKeyOld = "049c741395aaa594bfa31002ce3ce0f596b5431aa0f764d3325e379d13ab920ecffaed3911e616f4ec462cb072451476eb910179ab841ca72f8dc42084fdefb37e";
         strObfuscationPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
         nStartMasternodePayments = 1524201152; //Fri, 09 Jan 2015 21:05:58 GMT
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
