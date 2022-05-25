@@ -1,8 +1,8 @@
-TenUp Core version *3.1.0* is now available from:  <https://github.com/tenup-project/tenup/releases>
+TenUp Core version *3.1.0* is now available from:  <https://github.com/tenup-coin/tenup/releases>
 
 This is a new major version release, including various bug fixes and performance improvements, as well as updated translations.
 
-Please report bugs using the issue tracker at github: <https://github.com/tenup-project/tenup/issues>
+Please report bugs using the issue tracker at github: <https://github.com/tenup-coin/tenup/issues>
 
 
 Mandatory Update
