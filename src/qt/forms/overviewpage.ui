@@ -798,7 +798,7 @@
                     </layout>
                    </widget>
                   </item>
-                  <item>
+                  <!-- <item>
                    <widget class="QFrame" name="frame_ZerocoinBalances">
                     <property name="frameShape">
                      <enum>QFrame::StyledPanel</enum>
@@ -1033,7 +1033,7 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
                      </item>
                     </layout>
                    </widget>
-                  </item>
+                  </item> -->
                  </layout>
                 </widget>
                </item>
