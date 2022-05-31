@@ -154,7 +154,7 @@ public:
         nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = ~1; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = ~1; //Last valid accumulator checkpoint
-        nBlockEnforceInvalidUTXO = 2077000; //Start enforcing the invalid UTXO's
+        nBlockEnforceInvalidUTXO = 2085858; //Start enforcing the invalid UTXO's
         nInvalidAmountFiltered = 100000*COIN; //Amount of invalid coins filtered through exchanges, that should be considered valid
         nBlockZerocoinV2 = 999999999; //!> The block that zerocoin v2 becomes active - roughly Tuesday, May 8, 2018 4:00:00 AM GMT
         nBlockDoubleAccumulated = 1050010;
