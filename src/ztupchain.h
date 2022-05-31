@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef TUPX_ZTUPCHAIN_H
-#define TUPX_ZTUPCHAIN_H
+#ifndef TENUP_ZTUPCHAIN_H
+#define TENUP_ZTUPCHAIN_H
 
 #include "libzerocoin/Coin.h"
 #include "libzerocoin/Denominations.h"
@@ -39,4 +39,4 @@ bool TxOutToPublicCoin(const CTxOut& txout, libzerocoin::PublicCoin& pubCoin, CV
 std::list<libzerocoin::CoinDenomination> ZerocoinSpendListFromBlock(const CBlock& block, bool fFilterInvalid);
 
 
-#endif //TUPX_ZTUPCHAIN_H
+#endif //TENUP_ZTUPCHAIN_H

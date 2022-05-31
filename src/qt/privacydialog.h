@@ -1,5 +1,4 @@
-// Copyright (c) 2017-2018 The PIVX developers
-// Copyright (c) 2017-2018 The TenUp developers
+// Copyright (c) 2017-2019 The TenUp developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -50,7 +49,7 @@ public:
     void setZTupControlLabels(int64_t nAmount, int nQuantity);
 
 public slots:
-    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance, 
+    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
                     const CAmount& zerocoinBalance, const CAmount& unconfirmedZerocoinBalance, const CAmount& immatureZerocoinBalance,
                     const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);
 protected:
@@ -71,9 +70,9 @@ private:
     CAmount currentWatchOnlyBalance;
     CAmount currentWatchUnconfBalance;
     CAmount currentWatchImmatureBalance;
-    
-    int nSecurityLevel = 0;
+
     bool fMinimizeChange = false;
+    bool fDenomsMinimized;
 
     int nDisplayUnit;
     bool updateLabel(const QString& address);
@@ -83,13 +82,13 @@ private slots:
     void on_payTo_textChanged(const QString& address);
     void on_addressBookButton_clicked();
 //    void coinControlFeatureChanged(bool);
-    void coinControlButtonClicked();
+// MINT disabled   void coinControlButtonClicked();
 //    void coinControlChangeChecked(int);
 //    void coinControlChangeEdited(const QString&);
-    void coinControlUpdateLabels();
+// MINT disabled    void coinControlUpdateLabels();
 
-    void coinControlClipboardQuantity();
-    void coinControlClipboardAmount();
+// MINT disabled    void coinControlClipboardQuantity();
+// MINT disabled    void coinControlClipboardAmount();
 //    void coinControlClipboardFee();
 //    void coinControlClipboardAfterFee();
 //    void coinControlClipboardBytes();
@@ -97,12 +96,15 @@ private slots:
 //    void coinControlClipboardLowOutput();
 //    void coinControlClipboardChange();
 
-    void on_pushButtonMintzTUP_clicked();
+// MINT disabled    void on_pushButtonMintzTUP_clicked();
     void on_pushButtonMintReset_clicked();
     void on_pushButtonSpentReset_clicked();
     void on_pushButtonSpendzTUP_clicked();
     void on_pushButtonZTupControl_clicked();
+    void on_pushButtonHideDenoms_clicked();
+    void on_pushButtonShowDenoms_clicked();
     void on_pasteButton_clicked();
+    void minimizeDenomsSection(bool fMinimize);
     void updateDisplayUnit();
     void updateAutomintStatus();
     void updateSPORK16Status();

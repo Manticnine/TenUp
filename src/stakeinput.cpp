@@ -1,14 +1,13 @@
-// Copyright (c) 2017-2018 The PIVX developers
-// Copyright (c) 2017-2018 The TenUp developers
+// Copyright (c) 2017-2019 The TenUp developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "accumulators.h"
+#include "ztup/accumulators.h"
 #include "chain.h"
-#include "primitives/deterministicmint.h"
+#include "ztup/deterministicmint.h"
 #include "main.h"
 #include "stakeinput.h"
-#include "wallet.h"
+#include "wallet/wallet.h"
 
 CZTupStake::CZTupStake(const libzerocoin::CoinSpend& spend)
 {
@@ -16,7 +15,6 @@ CZTupStake::CZTupStake(const libzerocoin::CoinSpend& spend)
     this->denom = spend.getDenomination();
     uint256 nSerial = spend.getCoinSerialNumber().getuint256();
     this->hashSerial = Hash(nSerial.begin(), nSerial.end());
-    this->pindexFrom = nullptr;
     fMint = false;
 }
 
@@ -72,15 +70,22 @@ CAmount CZTupStake::GetValue()
 }
 
 //Use the first accumulator checkpoint that occurs 60 minutes after the block being staked from
+// In case of regtest, next accumulator of 60 blocks after the block being staked from
 bool CZTupStake::GetModifier(uint64_t& nStakeModifier)
 {
     CBlockIndex* pindex = GetIndexFrom();
     if (!pindex)
-        return false;
+        return error("%s: failed to get index from", __func__);
+
+    if(Params().NetworkID() == CBaseChainParams::REGTEST) {
+        // Stake modifier is fixed for now, move it to 60 blocks after this pindex in the future..
+        nStakeModifier = pindexFrom->nStakeModifier;
+        return true;
+    }
 
     int64_t nTimeBlockFrom = pindex->GetBlockTime();
     while (true) {
-        if (pindex->GetBlockTime() - nTimeBlockFrom > 60*60) {
+        if (pindex->GetBlockTime() - nTimeBlockFrom > 60 * 60) {
             nStakeModifier = pindex->nAccumulatorCheckpoint.Get64();
             return true;
         }
@@ -113,15 +118,14 @@ bool CZTupStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
     if (libzerocoin::ExtractVersionFromSerial(mint.GetSerialNumber()) < 2)
         return error("%s: serial extract is less than v2", __func__);
 
-    int nSecurityLevel = 100;
     CZerocoinSpendReceipt receipt;
-    if (!pwallet->MintToTxIn(mint, nSecurityLevel, hashTxOut, txIn, receipt, libzerocoin::SpendType::STAKE, GetIndexFrom()))
-        return error("%s\n", receipt.GetStatusMessage());
+    if (!pwallet->MintToTxIn(mint, hashTxOut, txIn, receipt, libzerocoin::SpendType::STAKE, pindexCheckpoint))
+        return error("%s", receipt.GetStatusMessage());
 
     return true;
 }
 
-bool CZTupStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTotal)
+bool CZTupStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal)
 {
     //Create an output returning the zTUP that was staked
     CTxOut outReward;
@@ -190,9 +194,9 @@ CAmount CTupStake::GetValue()
     return txFrom.vout[nPosition].nValue;
 }
 
-bool CTupStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTotal)
+bool CTupStake::CreateTxOuts(CWallet* pwallet, std::vector<CTxOut>& vout, CAmount nTotal)
 {
-    vector<valtype> vSolutions;
+    std::vector<valtype> vSolutions;
     txnouttype whichType;
     CScript scriptPubKeyKernel = txFrom.vout[nPosition].scriptPubKey;
     if (!Solver(scriptPubKeyKernel, whichType, vSolutions)) {
@@ -208,7 +212,8 @@ bool CTupStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTo
     {
         //convert to pay to public key type
         CKey key;
-        if (!pwallet->GetKey(uint160(vSolutions[0]), key))
+        CKeyID keyID = CKeyID(uint160(vSolutions[0]));
+        if (!pwallet->GetKey(keyID, key))
             return false;
 
         scriptPubKey << key.GetPubKey() << OP_CHECKSIG;
@@ -226,15 +231,16 @@ bool CTupStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTo
 
 bool CTupStake::GetModifier(uint64_t& nStakeModifier)
 {
-    int nStakeModifierHeight = 0;
-    int64_t nStakeModifierTime = 0;
-    GetIndexFrom();
-    if (!pindexFrom)
-        return error("%s: failed to get index from", __func__);
-
-    if (!GetKernelStakeModifier(pindexFrom->GetBlockHash(), nStakeModifier, nStakeModifierHeight, nStakeModifierTime, false))
-        return error("CheckStakeKernelHash(): failed to get kernel stake modifier \n");
-
+    if (this->nStakeModifier == 0) {
+        // look for the modifier
+        GetIndexFrom();
+        if (!pindexFrom)
+            return error("%s: failed to get index from", __func__);
+        // TODO: This method must be removed from here in the short terms.. it's a call to an static method in kernel.cpp when this class method is only called from kernel.cpp, no comments..
+        if (!GetKernelStakeModifier(pindexFrom->GetBlockHash(), this->nStakeModifier, this->nStakeModifierHeight, this->nStakeModifierTime, false))
+            return error("CheckStakeKernelHash(): failed to get kernel stake modifier");
+    }
+    nStakeModifier = this->nStakeModifier;
     return true;
 }
 
@@ -249,6 +255,8 @@ CDataStream CTupStake::GetUniqueness()
 //The block that the UTXO was added to the chain
 CBlockIndex* CTupStake::GetIndexFrom()
 {
+    if (pindexFrom)
+        return pindexFrom;
     uint256 hashBlock = 0;
     CTransaction tx;
     if (GetTransaction(txFrom.GetHash(), tx, hashBlock, true)) {

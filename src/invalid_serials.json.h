@@ -1,10 +1,10 @@
-// Copyright (c) 2018 The PIVX developers
+// Copyright (c) 2018 The TenUp developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 
 
-#ifndef TEUNP_INVALID_SERIALS_JSON_H
+#ifndef TENUP_INVALID_SERIALS_JSON_H
 #define TENUP_INVALID_SERIALS_JSON_H
 
 #include <string>

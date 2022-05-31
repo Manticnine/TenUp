@@ -1,6 +1,5 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
-// Copyright (c) 2017-2018 The PIVX developers
-// Copyright (c) 2017-2018 The TenUp developers
+// Copyright (c) 2017-2019 The TenUp developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,13 +11,14 @@
 #include "masternodelist.h"
 
 #include <QStackedWidget>
-#include <ui_interface.h>
+#include <guiinterface.h>
 
 class BitcoinGUI;
 class ClientModel;
 class OverviewPage;
 class ReceiveCoinsDialog;
 class PrivacyDialog;
+class GovernancePage;
 class SendCoinsDialog;
 class SendCoinsRecipient;
 class TransactionView;
@@ -68,6 +68,7 @@ private:
     QWidget* transactionsPage;
     ReceiveCoinsDialog* receiveCoinsPage;
     PrivacyDialog* privacyPage;
+    GovernancePage* governancePage;
     SendCoinsDialog* sendCoinsPage;
     BlockExplorer* explorerWindow;
     MasternodeList* masternodeListPage;
@@ -82,6 +83,8 @@ public slots:
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
+    /** Switch to governance page */
+    void gotoGovernancePage();
     /** Switch to masternode page */
     void gotoMasternodePage();
     /** Switch to explorer page */

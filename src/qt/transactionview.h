@@ -1,6 +1,5 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
-// Copyright (c) 2017 The PIVX developers
-// Copyright (c) 2017 The TenUp developers
+// Copyright (c) 2017-2018 The TenUp developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,6 +10,7 @@
 
 #include <QKeyEvent>
 #include <QWidget>
+#include <QAction>
 
 class TransactionFilterProxy;
 class WalletModel;
@@ -68,6 +68,7 @@ private:
     QComboBox* watchOnlyWidget;
     QLineEdit* addressWidget;
     QLineEdit* amountWidget;
+    QAction* hideOrphansAction;
 
     QMenu* contextMenu;
     QSignalMapper* mapperThirdPartyTxUrls;
@@ -108,6 +109,8 @@ signals:
 public slots:
     void chooseDate(int idx);
     void chooseType(int idx);
+    void hideOrphans(bool fHide);
+    void updateHideOrphans(bool fHide);
     void chooseWatchonly(int idx);
     void changedPrefix(const QString& prefix);
     void changedAmount(const QString& amount);

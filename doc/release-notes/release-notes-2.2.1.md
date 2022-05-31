@@ -1,13 +1,13 @@
 TenUp Core version 2.2.1 is now available from:
 
-  <https://github.com/tenup-project/tenup/releases>
+  <https://github.com/tenup-coin/tenup/releases>
 
 This is a new minor version release, including various bug fixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/tenup-project/tenup/issues>
+  <https://github.com/tenup-coin/tenup/issues>
 
 Compatibility
 ==============
